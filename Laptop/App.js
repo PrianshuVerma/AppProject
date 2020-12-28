@@ -9,15 +9,13 @@ export default function App() {
   return (
 
     <View style={styles.container}>
-      <Button style={styles.But}
-        title={'Press me!'}
-        onPress={() => {
-          setCount(count + 1)
-        }}
-      />
+      <View style = {styles.buttonContainer}>
+        <Button title ='go'/>
+      </View>
+      
       <Text style={styles.text}>{`Pressed ${count} times`}</Text>
 
-      <Text style={styles.title}>Home Page</Text>
+      <Text style={styles.title}>Tech shit</Text>
       <Image style={styles.img}
         resizeMode="contain"
         source={{ uri: "https://raw.githubusercontent.com/PrianshuVerma/AppProject/master/Laptop/assets/mac.png"}}
@@ -33,8 +31,8 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#1F2833',
-    //alignItems: 'center',
-    //justifyContent: 'space-between',
+    alignItems: 'center',
+    justifyContent: 'center',
   },
 
   img:{
@@ -53,17 +51,17 @@ const styles = StyleSheet.create({
     //justifyContent: ''
     position: 'absolute',
     alignSelf: 'center',
-    paddingTop: 175,
+    paddingTop: 50,
     color:'#66FCF1',
     fontFamily: 'Verdana-BoldItalic',
     fontSize: 40,
     fontWeight: 'bold'
 
   },
-  But: {
-    alignSelf: 'center',
-    width: 200,
-    height: 500
+  buttonContainer: {
+    color: 'black',
+    marginBottom: 20
+
   }
 
 });
