@@ -1,33 +1,23 @@
 import React from 'react';
-import { View, Text, StyleSheet, Button, ImageBackground, Image } from 'react-native';
-import { TouchableOpacity } from 'react-native-gesture-handler';
+import { View, Text, StyleSheet, Button, ImageBackground, Image, TouchableOpacity } from 'react-native';
+
  
 const image = { uri: "https://wallpaperaccess.com/full/1182654.png" };
 
 const Home = ({navigation}) => {
   return (
     <View style={styles.container}>
-
         <ImageBackground source={image} style={styles.image}>
           <Image source={require('./images/Asset4.png')} style={styles.logo} />
             <Text style={styles.text}>This is the Home Screen</Text>
-
-            <TouchableOpacity 
-                  onPress={() => navigation.navigate('Result Page')} 
-                  style={styles.search}>
+            <TouchableOpacity onPress={() => navigation.navigate('Search Page')} style={styles.search}>
                   <Text style={styles.searchtext}>Go To Search Screen</Text>
             </TouchableOpacity>
-
             <View style={styles.horizontal}>
-              <TouchableOpacity 
-                  onPress={() => navigation.navigate('Search Page')} 
-                  style={styles.signin}>
+              <TouchableOpacity onPress={() => navigation.navigate('Search Page')} style={styles.signin}>
                   <Text style={styles.signintext}>SIGN IN</Text>
               </TouchableOpacity>
-
-              <TouchableOpacity 
-                  onPress={() => navigation.navigate('Search Page')} 
-                  style={styles.register}>
+              <TouchableOpacity onPress={() => navigation.navigate('Search Page')} style={styles.register}>
                   <Text style={styles.registertext}>REGISTER</Text>
               </TouchableOpacity>
             </View>
@@ -36,12 +26,10 @@ const Home = ({navigation}) => {
     </View>
   );
 };
- 
+
 const styles = StyleSheet.create({
-    container: {
-      flex: 1,
-      flexDirection: "column"
-    },
+  
+
 
     horizontal: {
       marginTop: 100,
@@ -121,4 +109,4 @@ const styles = StyleSheet.create({
     }
   });
 
-export default Home;
+  export default Home;
