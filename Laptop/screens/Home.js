@@ -1,9 +1,5 @@
 import React from 'react';
 import { View, Text, StyleSheet, Button, ImageBackground, Image, TouchableOpacity } from 'react-native';
-<<<<<<< HEAD
-=======
-
->>>>>>> 9fdb11a2d1f5e7671775c013e1ef7b98399d2f2b
  
 const image = { uri: "https://wallpaperaccess.com/full/1182654.png" };
 
