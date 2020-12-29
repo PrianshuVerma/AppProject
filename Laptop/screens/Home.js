@@ -1,6 +1,8 @@
 import React from 'react';
 import { View, Text, StyleSheet, Button, ImageBackground, Image, TouchableOpacity } from 'react-native';
+
  
+
 const image = { uri: "https://wallpaperaccess.com/full/1182654.png" };
 
 const Home = ({navigation}) => {
@@ -28,7 +30,7 @@ const Home = ({navigation}) => {
                   style={styles.register}>
                   <Text style={styles.registertext}>REGISTER</Text>
               </TouchableOpacity>
-              
+
             </View>
         </ImageBackground>
         
@@ -37,13 +39,13 @@ const Home = ({navigation}) => {
 };
 
 const styles = StyleSheet.create({
-
-    container: {
-      flex: 1,
-      alignContent: 'center',
-      flexDirection: "column",
-    },
-    
+  
+  container: {
+    flex: 1,
+    alignContent: 'center',
+    flexDirection: "column",
+  },
+  
     horizontal: {
       marginTop: 100,
       alignSelf: 'center',

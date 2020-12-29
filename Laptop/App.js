@@ -15,6 +15,7 @@ const App = () => {
     <NavigationContainer>
         
             <RootStack.Navigator>
+                
                 <RootStack.Screen name="Home Page" component={Home} />
                 <RootStack.Screen name="Search Page" component={Search} />
                 <RootStack.Screen name="Result Page" component={Result} />
