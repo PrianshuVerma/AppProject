@@ -2,28 +2,19 @@ import React from 'react';
 import { View, Text, StyleSheet, Button, ImageBackground, Image, TouchableOpacity } from 'react-native';
 
  
+//const image = { uri: "https://wallpaperaccess.com/full/1182654.png" };
 
 const image = { uri: "https://wallpaperaccess.com/full/1182654.png" };
 
 const Home = ({navigation}) => {
   return (
     <View style={styles.container}>
-        <ImageBackground source={image} style={styles.image}>
           <Image source={require('./images/Asset4.png')} style={styles.logo} />
-            <Text style={styles.text}>This is the Home Screen</Text>
-
             <TouchableOpacity 
                 onPress={() => navigation.navigate('Search Page')} 
                 style={styles.search}>
                 <Text style={styles.searchtext}>Go To Search Screen</Text>
             </TouchableOpacity>
-            
-            <View style={styles.horizontal}>
-              <TouchableOpacity 
-                  onPress={() => navigation.navigate('Search Page')} 
-                  style={styles.signin}>
-                  <Text style={styles.signintext}>SIGN IN</Text>
-              </TouchableOpacity>
 
               <TouchableOpacity 
                   onPress={() => navigation.navigate('Search Page')} 
@@ -32,13 +23,18 @@ const Home = ({navigation}) => {
               </TouchableOpacity>
 
             </View>
-        </ImageBackground>
-        
-    </View>
   );
 };
 
 const styles = StyleSheet.create({
+
+    container: {
+      flex: 1,
+      alignContent: 'center',
+      flexDirection: "column",
+      backgroundColor: '#0B0C10'
+    },
+    
   
   container: {
     flex: 1,
@@ -47,7 +43,7 @@ const styles = StyleSheet.create({
   },
   
     horizontal: {
-      marginTop: 100,
+      marginTop: 300,
       alignSelf: 'center',
       flexDirection: "row"
     },
@@ -89,19 +85,21 @@ const styles = StyleSheet.create({
     searchtext:{
       justifyContent: 'center',
       textAlign: 'center',
-      fontFamily: "Verdana-Bold",
+      fontFamily: "",
       fontSize: 20,
-      color: '#000000'
+      color: '#fff5ee'
+      //fontWeight: 'bold'
     },
     
     search:{
       alignSelf:'center',
       justifyContent: 'center',
-      borderRadius: 10,
       width: 300,
       height: 50,
-      marginTop: 30,     
-      backgroundColor: "#66FCF1",      
+      marginTop: 500,     
+      backgroundColor: "#0B0C10",
+      borderColor: "#66FCF1",
+      borderWidth: 1,   
     },
 
     register:{

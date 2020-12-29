@@ -6,6 +6,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import Home from './screens/Home';
 import Search from './screens/Search';
 import Result from './screens/Result';
+
  
 const RootStack = createStackNavigator(
   
@@ -19,6 +20,8 @@ const App = () => {
         
             <RootStack.Navigator>
                 <RootStack.Screen options = {{headerShown: false}}name="Home Page" component={Home} />
+                
+                <RootStack.Screen name="Home Page" component={Home} />
                 <RootStack.Screen name="Search Page" component={Search} />
                 <RootStack.Screen name="Result Page" component={Result} />
              </RootStack.Navigator>
