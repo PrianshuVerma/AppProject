@@ -11,8 +11,6 @@ const Search = ({navigation}) => {
 <<<<<<< HEAD
      
 
-=======
->>>>>>> 9fdb11a2d1f5e7671775c013e1ef7b98399d2f2b
       <Text>This is the Search Page</Text>
       <Button
                 title="View Result"
