@@ -38,10 +38,12 @@ const Home = ({navigation}) => {
 
 const styles = StyleSheet.create({
 
-  
-    flexDirection: "column",
-  
-  
+    container: {
+      flex: 1,
+      alignContent: 'center',
+      flexDirection: "column",
+    },
+    
     horizontal: {
       marginTop: 100,
       alignSelf: 'center',

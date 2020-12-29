@@ -8,9 +8,6 @@ const Search = ({navigation}) => {
   return (
     
     <View style={styles.container}>
-<<<<<<< HEAD
-     
-
       <Text>This is the Search Page</Text>
       <Button
                 title="View Result"
