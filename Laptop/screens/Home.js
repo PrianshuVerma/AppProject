@@ -13,16 +13,26 @@ const Home = ({navigation}) => {
         <ImageBackground source={image} style={styles.image}>
           <Image source={require('./images/Asset4.png')} style={styles.logo} />
             <Text style={styles.text}>This is the Home Screen</Text>
-            <TouchableOpacity onPress={() => navigation.navigate('Search Page')} style={styles.search}>
-                  <Text style={styles.searchtext}>Go To Search Screen</Text>
+
+            <TouchableOpacity 
+                onPress={() => navigation.navigate('Search Page')} 
+                style={styles.search}>
+                <Text style={styles.searchtext}>Go To Search Screen</Text>
             </TouchableOpacity>
+            
             <View style={styles.horizontal}>
-              <TouchableOpacity onPress={() => navigation.navigate('Search Page')} style={styles.signin}>
+              <TouchableOpacity 
+                  onPress={() => navigation.navigate('Search Page')} 
+                  style={styles.signin}>
                   <Text style={styles.signintext}>SIGN IN</Text>
               </TouchableOpacity>
-              <TouchableOpacity onPress={() => navigation.navigate('Search Page')} style={styles.register}>
+
+              <TouchableOpacity 
+                  onPress={() => navigation.navigate('Search Page')} 
+                  style={styles.register}>
                   <Text style={styles.registertext}>REGISTER</Text>
               </TouchableOpacity>
+              
             </View>
         </ImageBackground>
         
@@ -31,9 +41,11 @@ const Home = ({navigation}) => {
 };
 
 const styles = StyleSheet.create({
+
   
-
-
+    flexDirection: "column",
+  
+  
     horizontal: {
       marginTop: 100,
       alignSelf: 'center',
