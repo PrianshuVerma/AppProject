@@ -1,12 +1,16 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, Button } from 'react-native';
  
 
 
-const Search = () => {
+const Search = ({navigation}) => {
   return (
     <View style={styles.container}>
       <Text>This is the Search Page</Text>
+      <Button
+                title="View Result"
+                onPress={() => navigation.navigate('Result Page')}
+            />
     </View>
   );
 };
