@@ -9,6 +9,7 @@ const Search = ({navigation}) => {
     
     <View style={styles.container}>
      
+
       <Text>This is the Search Page</Text>
       <Button
                 title="View Result"
