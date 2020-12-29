@@ -7,16 +7,18 @@ import Home from './screens/Home';
 import Search from './screens/Search';
 import Result from './screens/Result';
  
-const RootStack = createStackNavigator();
+const RootStack = createStackNavigator(
+  
+);
 
 const App = () => {
   return (
 
+    
     <NavigationContainer>
         
             <RootStack.Navigator>
-                
-                <RootStack.Screen name="Home Page" component={Home} />
+                <RootStack.Screen options = {{headerShown: false}}name="Home Page" component={Home} />
                 <RootStack.Screen name="Search Page" component={Search} />
                 <RootStack.Screen name="Result Page" component={Result} />
              </RootStack.Navigator>
