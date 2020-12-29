@@ -1,6 +1,5 @@
 import React from 'react';
-import { View, Text, StyleSheet, Button, ImageBackground, Image } from 'react-native';
-import { TouchableOpacity } from 'react-native-gesture-handler';
+import { View, Text, StyleSheet, Button, ImageBackground, Image, TouchableOpacity } from 'react-native';
  
 const image = { uri: "https://wallpaperaccess.com/full/1182654.png" };
 
