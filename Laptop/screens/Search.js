@@ -4,8 +4,6 @@ import DropDownPicker from 'react-native-dropdown-picker';
 import Icon from 'react-native-vector-icons/Feather';
 
 
-this.state = {country: null};
-country: 'uk'
 const Search = ({navigation}) => {
   return (
     
