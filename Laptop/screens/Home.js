@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, Button } from 'react-native';
  
 const styles = StyleSheet.create({
   container: {
@@ -9,10 +9,14 @@ const styles = StyleSheet.create({
   },
 });
  
-const Home = () => {
+const Home = ({navigation}) => {
   return (
     <View style={styles.container}>
-      <Text>Protected Home Screen</Text>
+      <Text>This is the Home Screen</Text>
+      <Button
+        title="Go To Search Screen"
+        onPress={() => navigation.navigate('Search Page')}
+        />
     </View>
   );
 };

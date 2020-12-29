@@ -13,13 +13,9 @@ const App = () => {
 
     <NavigationContainer>
         
-            <View style={styles.container}>
-                <Text>Hello React Native!</Text>
-            </View>
-        
             <RootStack.Navigator>
-                <RootStack.Screen name="Search Page" component={Search} />
                 <RootStack.Screen name="Home Page" component={Home} />
+                <RootStack.Screen name="Search Page" component={Search} />
              </RootStack.Navigator>
     </NavigationContainer>
   );
