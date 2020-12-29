@@ -1,7 +1,10 @@
 import React from 'react';
 import { View, Text, StyleSheet, Button, ImageBackground, Image, TouchableOpacity } from 'react-native';
+
  
 //const image = { uri: "https://wallpaperaccess.com/full/1182654.png" };
+
+const image = { uri: "https://wallpaperaccess.com/full/1182654.png" };
 
 const Home = ({navigation}) => {
   return (
@@ -13,8 +16,13 @@ const Home = ({navigation}) => {
                 <Text style={styles.searchtext}>Go To Search Screen</Text>
             </TouchableOpacity>
 
-        
-    </View>
+              <TouchableOpacity 
+                  onPress={() => navigation.navigate('Search Page')} 
+                  style={styles.register}>
+                  <Text style={styles.registertext}>REGISTER</Text>
+              </TouchableOpacity>
+
+            </View>
   );
 };
 
@@ -27,6 +35,13 @@ const styles = StyleSheet.create({
       backgroundColor: '#0B0C10'
     },
     
+  
+  container: {
+    flex: 1,
+    alignContent: 'center',
+    flexDirection: "column",
+  },
+  
     horizontal: {
       marginTop: 300,
       alignSelf: 'center',
