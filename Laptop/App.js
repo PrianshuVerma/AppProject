@@ -1,23 +1,28 @@
-import { StatusBar } from 'expo-status-bar';
-import React, { useState } from 'react';
-import { createAppContainer } from 'react-navigation';
-import { createStackNavigator } from 'react-navigation-stack';
-import Home from './src/Home';
-import Search from './src/Search';
+//import * as React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import React from 'react';
+import { StyleSheet, Text, View } from 'react-native';
+ 
+ 
+const App = () => {
+  return (
 
-const navigator = createStackNavigator(
-  {
-    HomePage: Home,
-    SearchPage: Search
-  },
+    <NavigationContainer>
+        {
+            <View style={styles.container}>
+                <Text>Hello React Native!</Text>
+            </View>
+        }
 
-  {
-    initialRouteName: 'SearchPage',
-
-    defualtNavigationOptions: {
-      title: 'App'
-    }
-  }
-);
-
-export default createAppNavigator(navigator);
+    </NavigationContainer>
+  );
+};
+ 
+const styles = StyleSheet.create({
+    container: {
+      flex: 1,
+      alignItems: 'center',
+      justifyContent: 'center',
+    },
+  });
+export default App;
