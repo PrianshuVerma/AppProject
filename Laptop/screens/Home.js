@@ -15,13 +15,6 @@ const Home = ({navigation}) => {
                 style={styles.search}>
                 <Text style={styles.searchtext}>Go To Search Screen</Text>
             </TouchableOpacity>
-
-              <TouchableOpacity 
-                  onPress={() => navigation.navigate('Search Page')} 
-                  style={styles.register}>
-                  <Text style={styles.registertext}>REGISTER</Text>
-              </TouchableOpacity>
-
             </View>
   );
 };
@@ -34,13 +27,6 @@ const styles = StyleSheet.create({
       flexDirection: "column",
       backgroundColor: '#0B0C10'
     },
-    
-  
-  container: {
-    flex: 1,
-    alignContent: 'center',
-    flexDirection: "column",
-  },
   
     horizontal: {
       marginTop: 300,
@@ -96,7 +82,7 @@ const styles = StyleSheet.create({
       justifyContent: 'center',
       width: 300,
       height: 50,
-      marginTop: 500,     
+      marginTop: 50,     
       backgroundColor: "#0B0C10",
       borderColor: "#66FCF1",
       borderWidth: 1,   
