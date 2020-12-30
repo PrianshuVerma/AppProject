@@ -130,12 +130,12 @@ const styles = StyleSheet.create({
       justifyContent: 'center',
     },
     brandContainer: {
-      position: 'absolute',
-      zindex: 10
+      //position: 'absolute',
+      zindex: 100
 
     },
     ramContainer: {
-      position: 'absolute',
+      //position: 'absolute',
       zIndex: 9,
 
     },
