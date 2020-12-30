@@ -121,7 +121,8 @@ const styles = StyleSheet.create({
       width: 300,
       height: 50,
       borderRadius: 30,
-      marginBottom: 100,     
+      marginTop: 25,
+      //marginBottom: 75,     
       backgroundColor: "#0B0C10",
       borderColor: "#66FCF1",
       borderWidth: 1
@@ -163,8 +164,9 @@ const styles = StyleSheet.create({
       alignItems: 'center',
       paddingHorizontal: 20,
       color: 'white',
-      marginBottom: 25,
-      marginLeft: 35,
+      marginBottom: 15,
+      //marginLeft: 35,
+      alignSelf: 'center',
       fontFamily: 'Verdana-Bold',
     },
     input: {
@@ -177,8 +179,9 @@ const styles = StyleSheet.create({
       alignItems: 'center',
       paddingHorizontal: 20,
       color: 'white',
-      marginBottom: 150,
-      marginLeft: 35,
+      //marginBottom: 20,
+      //marginLeft: 35,
+      alignSelf: 'center',
       fontFamily: 'Verdana-Bold',
     },
     login: {
