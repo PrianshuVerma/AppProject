@@ -10,11 +10,6 @@ const Home = ({navigation}) => {
   return (
     <View style={styles.container}>
           <Image source={require('./images/logo.png')} style={styles.logo} />
-            <TouchableOpacity 
-                onPress={() => navigation.navigate('Search Page')} 
-                style={styles.search}>
-                <Text style={styles.searchtext}>Go To Search Screen</Text>
-            </TouchableOpacity>
 
             <View style = {styles.inputContainer}> 
                 <TextInput
@@ -66,9 +61,11 @@ const styles = StyleSheet.create({
 
     logo: {
       alignSelf: 'center',
-      height: 120,
-      width: 220,
-      marginTop: 50
+      height: 100,
+      width: 190,
+      marginTop: 50,
+      //aspectRatio: 1.5,
+      resizeMode: 'contain'
     },
 
     text:{
