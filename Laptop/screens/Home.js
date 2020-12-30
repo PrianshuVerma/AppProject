@@ -9,7 +9,13 @@ const image = { uri: "https://wallpaperaccess.com/full/1182654.png" };
 const Home = ({navigation}) => {
   return (
     <View style={styles.container}>
-        <Image source={require('./images/goku.jpg')} style={styles.logo} />
+          <Image source={require('./images/logo.png')} style={styles.logo} />
+            <TouchableOpacity 
+                onPress={() => navigation.navigate('Search Page')} 
+                style={styles.search}>
+                <Text style={styles.searchtext}>Go To Search Screen</Text>
+            </TouchableOpacity>
+
             <View style = {styles.inputContainer}> 
                 <TextInput
                 style = {styles.username}
@@ -60,8 +66,8 @@ const styles = StyleSheet.create({
 
     logo: {
       alignSelf: 'center',
-      height: 250,
-      width: 350,
+      height: 200,
+      width: 300,
       marginTop: 50
     },
 
