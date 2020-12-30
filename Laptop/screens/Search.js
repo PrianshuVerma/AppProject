@@ -11,24 +11,27 @@ const Search = ({navigation}) => {
   return (
     
     <View style={styles.container}>
-      <Text>This is the Search Page {Brand}</Text>
-      <DropDownPicker
-    items={[
-        {label: "All",               value: "all"},
-        {label: 'Mac',              value: 'mac'},
-        {label: 'Window',           value: 'window'},
-        {label: "Helward Package",  value:"hp" },
-        {label:"Asus",              value:"asus"},
-        {label:"Acer",              value:"acer"},
-        {label:"Microsoft",         value:"microsoft" },
-        {label: "Dell",             value:"dell"},
+      <Text>This is the Search Page</Text>
 
-    ]}
-    placeholder= {"Select Brand"}
-    defaultIndex={"fsdfsdf"}
-    containerStyle={{height: 40, alignSelf: "center"}}
-    onChangeItem={item => setBrand(item.value)}// console.log(item.label, item.value)}
-/>
+
+      <DropDownPicker
+        items={[
+          {label: "All",               value: "all"},
+          {label: 'Mac',              value: 'mac'},
+          {label: 'Window',           value: 'window'},
+          {label: "Helward Package",  value:"hp" },
+          {label:"Asus",              value:"asus"},
+          {label:"Acer",              value:"acer"},
+          {label:"Microsoft",         value:"microsoft" },
+          {label: "Dell",             value:"dell"},
+
+        ]}
+        placeholder= {"Select Brand..."}
+        defaultIndex={"fsdfsdf"}
+        containerStyle={{height: 40, width: 175, alignSelf: "center"}}
+        onChangeItem={item => setBrand(item.value)}
+
+      />
 
       <Button   
                 //style={{ marginTop: 300}}
