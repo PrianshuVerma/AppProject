@@ -60,21 +60,12 @@ const styles = StyleSheet.create({
     },
 
     logo: {
-<<<<<<< HEAD
       alignSelf: 'center',
-      height: 100,
-      width: 190,
-      marginTop: 50,
-      //aspectRatio: 1.5,
-      resizeMode: 'contain'
-=======
-      alignSelf: 'left',
+      marginRight: 225,
       height: 100,
       width: 190,
       marginTop: 100,
-      marginLeft: 200,
       resizeMode: "contain"
->>>>>>> 53c24b558a0ce400390d608b98dc5a7ebee7d2b6
     },
 
     text:{

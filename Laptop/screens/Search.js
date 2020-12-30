@@ -44,14 +44,15 @@ const Search = ({navigation}) => {
           {label: "Dell",             value: "dell"},
 
         ]}
-        style={{ backgroundColor: '#212121', borderColor: "#66FCF1",}}
-        labelStyle={{ fontSize: 14, textAlign: 'left', color: 'white'}}
-        dropDownStyle={{ backgroundColor: '#212121', borderColor: "#66FCF1",}}
-        arrowStyle={{backgroundColor: "white"}}
+        style= {{ backgroundColor: '#212121', borderColor: "#66FCF1", baseColor: "white"}}
+        labelStyle= {{ fontSize: 14, textAlign: 'left', color: 'white'}}
+        dropDownStyle= {{ backgroundColor: '#212121', borderColor: "#66FCF1",}}
+        //arrowStyle= {{backgroundColor: "white"}}
         placeholder= {"Select Brand..."}
-        defaultIndex={0}
-        containerStyle={{height: 60, width: 275, alignSelf: "center",}}
-        onChangeItem={item => setBrand(item.value)}
+        //baseColor={"black"}
+        defaultIndex= {0}
+        containerStyle={ {height: 60, width: 275, alignSelf: "center",}}
+        onChangeItem= {item => setBrand(item.value)}
       />
         </View>
 
