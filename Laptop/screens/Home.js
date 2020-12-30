@@ -49,7 +49,7 @@ const styles = StyleSheet.create({
 
     logo: {
       alignSelf: 'center',
-      marginRight: 225,
+      //marginRight: 225,
       height: 100,
       width: 190,
       marginTop: 200,
