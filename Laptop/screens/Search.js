@@ -112,8 +112,6 @@ const Search = ({navigation}) => {
         onChangeItem={item => setBrand(item.value)}
       />
         </View>
-
-
         
       <Button   
                 //style={{ marginTop: 300}}
