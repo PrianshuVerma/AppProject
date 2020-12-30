@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, Text, StyleSheet, Image, TouchableOpacity, TextInput } from 'react-native';
- 
+import Icon from 'react-native-vector-icons/MaterialIcons';
+
 //const image = { uri: "https://wallpaperaccess.com/full/1182654.png" };
 
 const image = { uri: "https://wallpaperaccess.com/full/1182654.png" };
@@ -19,11 +20,20 @@ const Home = ({navigation}) => {
             </View>
 
             <View style = {styles.inputContainer}> 
-                <TextInput  style = {styles.inputContainer} 
+                <TextInput
+                style = {{flex:1, fontSize: 18, borderColor: '#66FCF1',
+                borderBottomWidth: 1, color: 'white'}}
                 placeholder = 'Username'
-                placeholderTextColor = 'white'/> 
-              </View>
+                placeholderTextColor = 'gray'/> 
+            </View>
 
+            <View style = {styles.input}> 
+                <TextInput
+                style = {{flex:1, fontSize: 18, borderColor: '#66FCF1',
+                borderBottomWidth: 1, color: 'white'}}
+                placeholder = 'Password'
+                placeholderTextColor = 'gray'/> 
+            </View>
     </View>
   );
 };
@@ -34,7 +44,7 @@ const styles = StyleSheet.create({
       flex: 1,
       alignContent: 'center',
       flexDirection: "column",
-      backgroundColor: '#0B0C10'
+      backgroundColor: '#0B0C10',
     },
   
     horizontal: {
@@ -117,25 +127,30 @@ const styles = StyleSheet.create({
     },
     inputContainer: {
       flex: 1,
-      height: 50,
-      width: 500,
+      maxHeight: 50,
+      width: 350,
       borderRadius: 10,
       flexDirection: 'row',
-      //backgroundColor: '#0B0C10',
+      backgroundColor: '#212121',
       alignItems: 'center',
-      //paddingHorizontal: 20,
-      //color: 'white',
-      marginBottom: 150,
-      marginLeft: 10,
-      fontFamily: 'Verdana-Bold',
-      borderColor: '#66FCF1',
-      borderBottomWidth: 5,
-    },
-    input: {
-
-      backgroundColor: '#0B0C10',
       paddingHorizontal: 20,
       color: 'white',
+      //marginBottom: 150,
+      marginLeft: 35,
+      fontFamily: 'Verdana-Bold',
+    },
+    input: {
+      flex: 1,
+      height: 50,
+      //width: 500,
+      borderRadius: 10,
+      flexDirection: 'row',
+      backgroundColor: '#0B0C10',
+      alignItems: 'center',
+      paddingHorizontal: 20,
+      color: 'white',
+      marginBottom: 250,
+      marginLeft: 35,
       fontFamily: 'Verdana-Bold',
     },
     login: {
