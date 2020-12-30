@@ -74,20 +74,25 @@ const Search = ({navigation}) => {
         <View style = {styles.processorContainer}>
       <DropDownPicker
         items={[
-          {label: "All",               value: "all"},
-          {label: 'Mac',              value: 'mac'},
-          {label: 'Window',           value: 'window'},
-          {label: "Helward Package",  value:"hp" },
-          {label:"Asus",              value:"asus"},
-          {label:"Acer",              value:"acer"},
-          {label:"Microsoft",         value:"microsoft" },
-          {label: "Dell",             value:"dell"},
-
+          {label: "Any",               value: "any"},
+          {label: 'Intel Core 8th Gen',              value: 'mac'},
+          {label: 'Intel Core 7th Gen',           value: 'window'},
+          {label: "Intel Core i9",        value:"hp" },
+          {label: "Intel Core i7",              value:"asus"},
+          {label: "Intel Core i5",              value:"acer"},
+          {label: "Intel Core i3",         value:"microsoft" },
+          {label: "Unified Memory",             value:"dell"},
+          {label: 'AMD Ryzen 7',           value: 'window'},
+          {label: 'AMD Ryzen 5',           value: 'window'},
+          {label: 'AMD Ryzen 3',           value: 'window'},
+          {label: 'AMD Ryzen 7',           value: 'window'},
+          {label: "Intel Core i3",         value:"microsoft" },
+          {label: "Unified Memory",             value:"dell"},
         ]}
-        placeholder= {"Select Brand..."}
+        placeholder= {"Select Processor..."}
         defaultIndex={0}
         containerStyle={{height: 40, width: 175, alignSelf: "center"}}
-        onChangeItem={item => setBrand(item.value)}
+        onChangeItem={item => setProcessor(item.value)}
       />
         </View>
 
