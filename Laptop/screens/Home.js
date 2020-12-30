@@ -16,14 +16,13 @@ const Home = ({navigation}) => {
             </TouchableOpacity>
             <View>
               <Text style = {styles.login}> Login </Text>
-
-              <View> 
-                  <TextInput  style = {styles.inputContainer} 
-                  placeholder = 'Username'
-                  placeholderTextColor = 'white'/> 
-
-              </View>
             </View>
+
+            <View style = {styles.inputContainer}> 
+                <TextInput  style = {styles.inputContainer} 
+                placeholder = 'Username'
+                placeholderTextColor = 'white'/> 
+              </View>
 
     </View>
   );
@@ -119,19 +118,25 @@ const styles = StyleSheet.create({
     inputContainer: {
       flex: 1,
       height: 50,
-      //width: 500,
+      width: 500,
       borderRadius: 10,
       flexDirection: 'row',
-      backgroundColor: '#0B0C10',
+      //backgroundColor: '#0B0C10',
       alignItems: 'center',
-      paddingHorizontal: 20,
-      color: 'white',
-      //borderColor: 'lightgrey',
-      marginTop: 150,
-      marginLeft: 100,
+      //paddingHorizontal: 20,
+      //color: 'white',
+      marginBottom: 150,
+      marginLeft: 10,
       fontFamily: 'Verdana-Bold',
       borderColor: '#66FCF1',
       borderBottomWidth: 5,
+    },
+    input: {
+
+      backgroundColor: '#0B0C10',
+      paddingHorizontal: 20,
+      color: 'white',
+      fontFamily: 'Verdana-Bold',
     },
     login: {
 
