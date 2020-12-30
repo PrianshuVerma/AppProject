@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import { View, Text, StyleSheet, Button } from 'react-native';
 import Icon from 'react-native-vector-icons/Feather';
 import {Picker} from '@react-native-picker/picker';
-
+import DropDownPicker from 'react-native-dropdown-picker';
 
 const Search = ({navigation}) => {
   const [Brand, setBrand] = useState('All');
@@ -12,20 +12,23 @@ const Search = ({navigation}) => {
     
     <View style={styles.container}>
       <Text>This is the Search Page {Brand}</Text>
-      
-      <Picker
-          selectedValue={Brand}
-          style={{height: 30, width: 100}}
-          onValueChange={(itemValue, itemIndex) => setBrand (itemValue)}
-        >
-        <Picker.Item label="All" value="all" />
-        <Picker.Item label="Mac" value="mac" />
-        <Picker.Item label="Helward Package" value="hp" />
-        <Picker.Item label="Asus" value="asus" />
-        <Picker.Item label="Acer" value="acer" />
-        <Picker.Item label="Microsoft" value="microsoft" />
-        <Picker.Item label="Dell" value="dell" />
-      </Picker>
+      <DropDownPicker
+    items={[
+        {label: "All",               value: "all"},
+        {label: 'Mac',              value: 'mac'},
+        {label: 'Window',           value: 'window'},
+        {label: "Helward Package",  value:"hp" },
+        {label:"Asus",              value:"asus"},
+        {label:"Acer",              value:"acer"},
+        {label:"Microsoft",         value:"microsoft" },
+        {label: "Dell",             value:"dell"},
+
+    ]}
+    placeholder= {"Select Brand"}
+    defaultIndex={"fsdfsdf"}
+    containerStyle={{height: 40, alignSelf: "center"}}
+    onChangeItem={item => setBrand(item.value)}// console.log(item.label, item.value)}
+/>
 
       <Button   
                 //style={{ marginTop: 300}}
