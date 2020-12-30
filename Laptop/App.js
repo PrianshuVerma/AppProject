@@ -14,16 +14,12 @@ const RootStack = createStackNavigator(
 
 const App = () => {
   return (
-
-    
     <NavigationContainer>
-        
             <RootStack.Navigator>
                 <RootStack.Screen options = {{headerShown: false}}name="Home Page" component={Home} />
-                <RootStack.Screen name="Search Page" component={Search} />
+                <RootStack.Screen options = {{headerShown: false}}name="Search Page" component={Search} />
                 <RootStack.Screen name="Result Page" component={Result} />
              </RootStack.Navigator>
-
     </NavigationContainer>
   );
 };
