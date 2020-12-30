@@ -39,7 +39,7 @@ const Search = ({navigation}) => {
           {label: "All",               value: "all"},
           {label: 'Mac',              value: 'mac'},
           {label: 'Window',           value: 'window'},
-          {label: "Helward Package",  value:"hp" },
+          {label: "Helward ",  value:"hp" },
           {label:"Asus",              value:"asus"},
           {label:"Acer",              value:"acer"},
           {label:"Microsoft",         value:"microsoft" },
@@ -132,10 +132,13 @@ const styles = StyleSheet.create({
       justifyContent: 'center',
     },
     brandContainer: {
-      position: 'relative'
+      position: 'absolute',
+      zindex: 10
 
     },
     ramContainer: {
+      position: 'absolute',
+      zIndex: 9,
 
     },
     processorContainer:{
