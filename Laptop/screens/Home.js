@@ -16,7 +16,7 @@ const Home = ({navigation}) => {
                 <Text style={styles.searchtext}>Go To Search Screen</Text>
             </TouchableOpacity>
             <View>
-              <Text style = {styles.login}> Login </Text>
+              <Text style = {styles.login}> Log the fuck in rn</Text>
             </View>
 
             <View style = {styles.inputContainer}> 
@@ -135,17 +135,17 @@ const styles = StyleSheet.create({
       alignItems: 'center',
       paddingHorizontal: 20,
       color: 'white',
-      //marginBottom: 150,
+      marginBottom: 25,
       marginLeft: 35,
       fontFamily: 'Verdana-Bold',
     },
     input: {
       flex: 1,
-      height: 50,
-      //width: 500,
+      maxHeight: 50,
+      width: 350,
       borderRadius: 10,
       flexDirection: 'row',
-      backgroundColor: '#0B0C10',
+      backgroundColor: '#212121',
       alignItems: 'center',
       paddingHorizontal: 20,
       color: 'white',
