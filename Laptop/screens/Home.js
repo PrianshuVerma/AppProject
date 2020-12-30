@@ -1,6 +1,5 @@
 import React from 'react';
-import { View, Text, StyleSheet, Button, ImageBackground, Image, TouchableOpacity } from 'react-native';
-
+import { View, Text, StyleSheet, Image, TouchableOpacity, TextInput } from 'react-native';
  
 //const image = { uri: "https://wallpaperaccess.com/full/1182654.png" };
 
@@ -15,7 +14,18 @@ const Home = ({navigation}) => {
                 style={styles.search}>
                 <Text style={styles.searchtext}>Go To Search Screen</Text>
             </TouchableOpacity>
+            <View>
+              <Text style = {styles.login}> Login </Text>
+
+              <View> 
+                  <TextInput  style = {styles.inputContainer} 
+                  placeholder = 'Username'
+                  placeholderTextColor = 'white'/> 
+
+              </View>
             </View>
+
+    </View>
   );
 };
 
@@ -71,7 +81,7 @@ const styles = StyleSheet.create({
     searchtext:{
       justifyContent: 'center',
       textAlign: 'center',
-      fontFamily: "",
+      fontFamily: "Verdana-Bold",
       fontSize: 20,
       color: '#fff5ee'
       //fontWeight: 'bold'
@@ -105,7 +115,32 @@ const styles = StyleSheet.create({
       height:50,
       alignSelf: 'flex-start',
       backgroundColor: "#ffffff",
-    }
+    },
+    inputContainer: {
+      flex: 1,
+      height: 50,
+      //width: 500,
+      borderRadius: 10,
+      flexDirection: 'row',
+      backgroundColor: '#0B0C10',
+      alignItems: 'center',
+      paddingHorizontal: 20,
+      color: 'white',
+      //borderColor: 'lightgrey',
+      marginTop: 150,
+      marginLeft: 100,
+      fontFamily: 'Verdana-Bold',
+      borderColor: '#66FCF1',
+      borderBottomWidth: 5,
+    },
+    login: {
+
+      fontFamily: 'Verdana-Bold',
+      color: '#66FCF1',
+      fontSize: 28,
+      marginTop: 50,
+      marginLeft: 50
+    },
   });
 
   export default Home;
