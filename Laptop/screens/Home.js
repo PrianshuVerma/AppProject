@@ -46,77 +46,16 @@ const styles = StyleSheet.create({
       flexDirection: "column",
       backgroundColor: '#0B0C10',
     },
-  
-    horizontal: {
-      marginTop: 300,
-      alignSelf: 'center',
-      flexDirection: "row"
-    },
-
-    image: {
-        flex: 1,
-        resizeMode: "cover",
-        justifyContent: "center"
-    },
 
     logo: {
-<<<<<<< HEAD
+
+      height: 100,
+      width: 190,
+      marginTop: 200,
+      //flexDirection: 'row',
       alignSelf: 'center',
-      height: 100,
-      width: 190,
-      marginTop: 50,
-      //aspectRatio: 1.5,
-      resizeMode: 'contain'
-=======
-      alignSelf: 'left',
-      height: 100,
-      width: 190,
-      marginTop: 100,
-      marginLeft: 200,
-      resizeMode: "contain"
->>>>>>> 53c24b558a0ce400390d608b98dc5a7ebee7d2b6
-    },
-
-    text:{
-        alignSelf: "center",
-        fontFamily: "Verdana-Bold",
-        fontSize: 30,
-        color: "#66FCF1"
-    },
-
-    registertext:{
-      alignSelf: "center",
-      fontFamily: "Verdana-Bold",
-      fontSize: 20,
-      color: '#ffffff'
-    },
-
-    signintext:{
-      alignSelf: "center",
-      fontFamily: "Verdana-Bold",
-      fontSize: 20,
-      color: '#000000'
-    },
-    
-    searchtext:{
-      justifyContent: 'center',
-      textAlign: 'center',
-      fontFamily: "Verdana-Bold",
-      fontSize: 20,
-      color: '#fff5ee'
-      //fontWeight: 'bold'
-    },
-    
-    search:{
-      alignSelf:'center',
-      justifyContent: 'center',
-      width: 300,
-      height: 50,
-      marginTop: 50,     
-      backgroundColor: "#0B0C10",
-      borderColor: "#66FCF1",
-      borderWidth: 1,   
-      marginBottom: 20,
+      //marginRight: 220,
+      resizeMode: "contain",
     },
 
     loginBtn:{
@@ -140,24 +79,7 @@ const styles = StyleSheet.create({
       color: '#fff5ee'
       //fontWeight: 'bold'
     },
-    register:{
-      justifyContent: 'center',
-      borderRadius:10,
-      width: 120,
-      height:50,
-      alignSelf: 'flex-end',
-      marginLeft: 60,     
-      backgroundColor: "#696969",      
-    },
 
-    signin:{
-      justifyContent: 'center',
-      borderRadius:10,
-      width: 120,
-      height:50,
-      alignSelf: 'flex-start',
-      backgroundColor: "#ffffff",
-    },
     inputContainer: {
       flex: 1,
       maxHeight: 45,
@@ -169,7 +91,7 @@ const styles = StyleSheet.create({
       paddingHorizontal: 20,
       color: 'white',
       marginTop: 25,
-      marginBottom: 15,
+      marginBottom: 25,
       //marginLeft: 35,
       alignSelf: 'center',
       fontFamily: 'Verdana-Italic',
@@ -189,14 +111,7 @@ const styles = StyleSheet.create({
       alignSelf: 'center',
       fontFamily: 'Verdana-Bold',
     },
-    login: {
 
-      fontFamily: 'Verdana-Bold',
-      color: '#fff5ee',
-      fontSize: 28,
-      marginTop: 50,
-      marginLeft: 50
-    },
     username: {
 
       flex:1, 
