@@ -48,14 +48,54 @@ const styles = StyleSheet.create({
     },
 
     logo: {
-
+      alignSelf: 'center',
+      marginRight: 225,
       height: 100,
       width: 190,
       marginTop: 200,
-      //flexDirection: 'row',
-      alignSelf: 'center',
-      //marginRight: 220,
-      resizeMode: "contain",
+      resizeMode: "contain"
+    },
+
+    text:{
+        alignSelf: "center",
+        fontFamily: "Verdana-Bold",
+        fontSize: 30,
+        color: "#66FCF1"
+    },
+
+    registertext:{
+      alignSelf: "center",
+      fontFamily: "Verdana-Bold",
+      fontSize: 20,
+      color: '#ffffff'
+    },
+
+    signintext:{
+      alignSelf: "center",
+      fontFamily: "Verdana-Bold",
+      fontSize: 20,
+      color: '#000000'
+    },
+    
+    searchtext:{
+      justifyContent: 'center',
+      textAlign: 'center',
+      fontFamily: "Verdana-Bold",
+      fontSize: 20,
+      color: '#fff5ee'
+      //fontWeight: 'bold'
+    },
+    
+    search:{
+      alignSelf:'center',
+      justifyContent: 'center',
+      width: 300,
+      height: 50,
+      marginTop: 50,     
+      backgroundColor: "#0B0C10",
+      borderColor: "#66FCF1",
+      borderWidth: 1,   
+      marginBottom: 20,
     },
 
     loginBtn:{

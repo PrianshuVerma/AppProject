@@ -44,14 +44,13 @@ const Search = ({navigation}) => {
           {label: "Dell",             value: "dell"},
 
         ]}
-        style={{ backgroundColor: '#212121', borderColor: "#66FCF1",}}
-        labelStyle={{ fontSize: 14, textAlign: 'left', color: 'white'}}
-        dropDownStyle={{ backgroundColor: '#212121', borderColor: "#66FCF1",}}
-        arrowStyle={{backgroundColor: "white"}}
+        style= {{ backgroundColor: '#212121', borderColor: "#66FCF1", baseColor: "white"}}
+        labelStyle= {{ fontSize: 14, textAlign: 'left', color: 'white'}}
+        dropDownStyle= {{ backgroundColor: '#212121', borderColor: "#66FCF1",}}
+        defaultIndex= {0}
+        containerStyle={ {height: 60, width: 275, alignSelf: "center",}}
         placeholder= {"Select Brand..."}
-        defaultIndex={0}
-        containerStyle={{height: 60, width: 275, alignSelf: "center",}}
-        onChangeItem={item => setBrand(item.value)}
+        onChangeItem= {item => setBrand(item.value)}
       />
         </View>
 
@@ -66,8 +65,11 @@ const Search = ({navigation}) => {
 
         ]}
         placeholder= {"Select Ram..."}
-        defaultIndex={0}
-        containerStyle={{height: 60, width: 275, alignSelf: "center"}}
+        style= {{ backgroundColor: '#212121', borderColor: "#66FCF1", baseColor: "white"}}
+        labelStyle= {{ fontSize: 14, textAlign: 'left', color: 'white'}}
+        dropDownStyle= {{ backgroundColor: '#212121', borderColor: "#66FCF1",}}
+        defaultIndex= {0}
+        containerStyle={ {height: 60, width: 275, alignSelf: "center",}}
         onChangeItem={item => setRam(item.value)}
       />
         </View>
@@ -89,8 +91,11 @@ const Search = ({navigation}) => {
           {label: "Other",                value: "other" },
         ]}
         placeholder= {"Select Processor..."}
-        defaultIndex={0}
-        containerStyle={{height: 60, width: 275, alignSelf: "center"}}
+        style= {{ backgroundColor: '#212121', borderColor: "#66FCF1", baseColor: "white"}}
+        labelStyle= {{ fontSize: 14, textAlign: 'left', color: 'white'}}
+        dropDownStyle= {{ backgroundColor: '#212121', borderColor: "#66FCF1",}}
+        defaultIndex= {0}
+        containerStyle={ {height: 60, width: 275, alignSelf: "center",}}
         onChangeItem={item => setProcessor(item.value)}
       />
         </View>
@@ -103,8 +108,11 @@ const Search = ({navigation}) => {
           {label: "SSD",    value: "ssd"},
         ]}
         placeholder= {"Select Hardrive..."}
-        defaultIndex={0}
-        containerStyle={{height: 60, width: 275, alignSelf: "center"}}
+        style= {{ backgroundColor: '#212121', borderColor: "#66FCF1", baseColor: "white"}}
+        labelStyle= {{ fontSize: 14, textAlign: 'left', color: 'white'}}
+        dropDownStyle= {{ backgroundColor: '#212121', borderColor: "#66FCF1",}}
+        defaultIndex= {0}
+        containerStyle={ {height: 60, width: 275, alignSelf: "center",}}
         onChangeItem={item => setHardrive(item.value)}
       />
       </View>
@@ -121,8 +129,11 @@ const Search = ({navigation}) => {
 
         ]}
         placeholder= {"Select Storage..."}
-        defaultIndex={0}
-        containerStyle={{height: 60, width: 275, alignSelf: "center"}}
+        style= {{ backgroundColor: '#212121', borderColor: "#66FCF1", baseColor: "white"}}
+        labelStyle= {{ fontSize: 14, textAlign: 'left', color: 'white'}}
+        dropDownStyle= {{ backgroundColor: '#212121', borderColor: "#66FCF1",}}
+        defaultIndex= {0}
+        containerStyle={ {height: 60, width: 275, alignSelf: "center",}}
         onChangeItem={item => setStorage(item.value)}
       />
         </View>
@@ -139,8 +150,11 @@ const Search = ({navigation}) => {
 
         ]}
         placeholder= {"Select Price..."}
-        defaultIndex={0}
-        containerStyle={{height: 60, width: 275, alignSelf: "center"}}
+        style= {{ backgroundColor: '#212121', borderColor: "#66FCF1", baseColor: "white"}}
+        labelStyle= {{ fontSize: 14, textAlign: 'left', color: 'white'}}
+        dropDownStyle= {{ backgroundColor: '#212121', borderColor: "#66FCF1",}}
+        defaultIndex= {0}
+        containerStyle={ {height: 60, width: 275, alignSelf: "center",}}
         onChangeItem={item => setPrice(item.value)}
       />
         </View>
