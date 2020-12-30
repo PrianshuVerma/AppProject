@@ -44,9 +44,9 @@ const Search = ({navigation}) => {
           {label: "Dell",             value: "dell"},
 
         ]}
-        style= {{ backgroundColor: '#212121', borderColor: "#66FCF1", baseColor: "white"}}
+        style= {{ backgroundColor: '#282828', borderColor: "#66FCF1", baseColor: "white"}}
         labelStyle= {{ fontSize: 14, textAlign: 'left', color: 'white'}}
-        dropDownStyle= {{ backgroundColor: '#212121', borderColor: "#66FCF1",}}
+        dropDownStyle= {{ backgroundColor: '#282828', borderColor: "#66FCF1",}}
         defaultIndex= {0}
         containerStyle={ {height: 60, width: 275, alignSelf: "center",}}
         placeholder= {"Select Brand..."}
@@ -65,9 +65,9 @@ const Search = ({navigation}) => {
 
         ]}
         placeholder= {"Select Ram..."}
-        style= {{ backgroundColor: '#212121', borderColor: "#66FCF1", baseColor: "white"}}
+        style= {{ backgroundColor: '#282828', borderColor: "#66FCF1", baseColor: "white"}}
         labelStyle= {{ fontSize: 14, textAlign: 'left', color: 'white'}}
-        dropDownStyle= {{ backgroundColor: '#212121', borderColor: "#66FCF1",}}
+        dropDownStyle= {{ backgroundColor: '#282828', borderColor: "#66FCF1",}}
         defaultIndex= {0}
         containerStyle={ {height: 60, width: 275, alignSelf: "center",}}
         onChangeItem={item => setRam(item.value)}
@@ -91,9 +91,9 @@ const Search = ({navigation}) => {
           {label: "Other",                value: "other" },
         ]}
         placeholder= {"Select Processor..."}
-        style= {{ backgroundColor: '#212121', borderColor: "#66FCF1", baseColor: "white"}}
+        style= {{ backgroundColor: '#282828', borderColor: "#66FCF1", baseColor: "white"}}
         labelStyle= {{ fontSize: 14, textAlign: 'left', color: 'white'}}
-        dropDownStyle= {{ backgroundColor: '#212121', borderColor: "#66FCF1",}}
+        dropDownStyle= {{ backgroundColor: '#282828', borderColor: "#66FCF1",}}
         defaultIndex= {0}
         containerStyle={ {height: 60, width: 275, alignSelf: "center",}}
         onChangeItem={item => setProcessor(item.value)}
@@ -108,9 +108,9 @@ const Search = ({navigation}) => {
           {label: "SSD",    value: "ssd"},
         ]}
         placeholder= {"Select Hardrive..."}
-        style= {{ backgroundColor: '#212121', borderColor: "#66FCF1", baseColor: "white"}}
+        style= {{ backgroundColor: '#282828', borderColor: "#66FCF1", baseColor: "white"}}
         labelStyle= {{ fontSize: 14, textAlign: 'left', color: 'white'}}
-        dropDownStyle= {{ backgroundColor: '#212121', borderColor: "#66FCF1",}}
+        dropDownStyle= {{ backgroundColor: '#282828', borderColor: "#66FCF1",}}
         defaultIndex= {0}
         containerStyle={ {height: 60, width: 275, alignSelf: "center",}}
         onChangeItem={item => setHardrive(item.value)}
@@ -129,9 +129,9 @@ const Search = ({navigation}) => {
 
         ]}
         placeholder= {"Select Storage..."}
-        style= {{ backgroundColor: '#212121', borderColor: "#66FCF1", baseColor: "white"}}
+        style= {{ backgroundColor: '#282828', borderColor: "#66FCF1", baseColor: "white"}}
         labelStyle= {{ fontSize: 14, textAlign: 'left', color: 'white'}}
-        dropDownStyle= {{ backgroundColor: '#212121', borderColor: "#66FCF1",}}
+        dropDownStyle= {{ backgroundColor: '#282828', borderColor: "#66FCF1",}}
         defaultIndex= {0}
         containerStyle={ {height: 60, width: 275, alignSelf: "center",}}
         onChangeItem={item => setStorage(item.value)}
@@ -150,9 +150,9 @@ const Search = ({navigation}) => {
 
         ]}
         placeholder= {"Select Price..."}
-        style= {{ backgroundColor: '#212121', borderColor: "#66FCF1", baseColor: "white"}}
+        style= {{ backgroundColor: '#282828', borderColor: "#66FCF1", baseColor: "white"}}
         labelStyle= {{ fontSize: 14, textAlign: 'left', color: 'white'}}
-        dropDownStyle= {{ backgroundColor: '#212121', borderColor: "#66FCF1",}}
+        dropDownStyle= {{ backgroundColor: '#282828', borderColor: "#66FCF1",}}
         defaultIndex= {0}
         containerStyle={ {height: 60, width: 275, alignSelf: "center",}}
         onChangeItem={item => setPrice(item.value)}
