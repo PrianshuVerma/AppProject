@@ -34,19 +34,23 @@ const Search = ({navigation}) => {
       <View style = {styles.brandContainer}>
       <DropDownPicker
         items={[
-          {label: "Any",               value: "any"},
+          {label: "Any",              value: "any"},
           {label: 'Mac',              value: 'mac'},
           {label: 'Window',           value: 'window'},
-          {label: "Hewlett-Packard",  value:"hp" },
-          {label:"Asus",              value:"asus"},
-          {label:"Acer",              value:"acer"},
-          {label:"Microsoft",         value:"microsoft" },
-          {label: "Dell",             value:"dell"},
+          {label: "Hewlett-Packard",  value: "hp" },
+          {label:"Asus",              value: "asus"},
+          {label:"Acer",              value: "acer"},
+          {label:"Microsoft",         value: "microsoft" },
+          {label: "Dell",             value: "dell"},
 
         ]}
+        style={{ backgroundColor: '#212121', borderColor: "#66FCF1",}}
+        labelStyle={{ fontSize: 14, textAlign: 'left', color: 'white'}}
+        dropDownStyle={{ backgroundColor: '#212121', borderColor: "#66FCF1",}}
+        arrowStyle={{backgroundColor: "white"}}
         placeholder= {"Select Brand..."}
         defaultIndex={0}
-        containerStyle={{height: 40, width: 175, alignSelf: "center"}}
+        containerStyle={{height: 60, width: 275, alignSelf: "center",}}
         onChangeItem={item => setBrand(item.value)}
       />
         </View>
@@ -63,7 +67,7 @@ const Search = ({navigation}) => {
         ]}
         placeholder= {"Select Ram..."}
         defaultIndex={0}
-        containerStyle={{height: 40, width: 175, alignSelf: "center"}}
+        containerStyle={{height: 60, width: 275, alignSelf: "center"}}
         onChangeItem={item => setRam(item.value)}
       />
         </View>
@@ -86,7 +90,7 @@ const Search = ({navigation}) => {
         ]}
         placeholder= {"Select Processor..."}
         defaultIndex={0}
-        containerStyle={{height: 40, width: 175, alignSelf: "center"}}
+        containerStyle={{height: 60, width: 275, alignSelf: "center"}}
         onChangeItem={item => setProcessor(item.value)}
       />
         </View>
@@ -100,7 +104,7 @@ const Search = ({navigation}) => {
         ]}
         placeholder= {"Select Hardrive..."}
         defaultIndex={0}
-        containerStyle={{height: 40, width: 175, alignSelf: "center"}}
+        containerStyle={{height: 60, width: 275, alignSelf: "center"}}
         onChangeItem={item => setHardrive(item.value)}
       />
       </View>
@@ -109,16 +113,16 @@ const Search = ({navigation}) => {
         <View style = {styles.storageContainer}>
       <DropDownPicker
         items={[
-          {label: "Any",                    value: "any"},
-          {label: 'Less then 255.9 GB',     value: 'low'},
-          {label: '512 GB - 999.9 GB',      value: 'medium'},
-          {label: "1 TB - 1.9 TB",          value: "high" },
-          {label: "2TB and Higher",          value: "mega"},
+          {label: "Any",                 value: "any"},
+          {label: 'Less then 255.9 GB',  value: 'low'},
+          {label: '512 GB - 999.9 GB',   value: 'medium'},
+          {label: "1 TB - 1.9 TB",       value: "high" },
+          {label: "2TB and Higher",      value: "mega"},
 
         ]}
         placeholder= {"Select Storage..."}
         defaultIndex={0}
-        containerStyle={{height: 40, width: 175, alignSelf: "center"}}
+        containerStyle={{height: 60, width: 275, alignSelf: "center"}}
         onChangeItem={item => setStorage(item.value)}
       />
         </View>
@@ -126,17 +130,17 @@ const Search = ({navigation}) => {
         <View style = {styles.priceContainer}>
       <DropDownPicker
         items={[
-          {label:"Any",                   value:"any"},
+          {label:"Any",                   value: "any"},
           {label: "$0.00 - $399.99",      value: "low"},
           {label: "$400.00 - $699.99",    value: 'medium'},
           {label: "$700.00 - $999.99",    value: 'high'},
-          {label: "$1000.00 - $1999.99",  value:"high-end" },
-          {label: "$2000.00 and Higher",  value:"premium" },
+          {label: "$1000.00 - $1999.99",  value: "high-end" },
+          {label: "$2000.00 and Higher",  value: "premium" },
 
         ]}
         placeholder= {"Select Price..."}
         defaultIndex={0}
-        containerStyle={{height: 40, width: 175, alignSelf: "center"}}
+        containerStyle={{height: 60, width: 275, alignSelf: "center"}}
         onChangeItem={item => setPrice(item.value)}
       />
         </View>
@@ -156,6 +160,7 @@ const styles = StyleSheet.create({
       flex: 1,
       alignItems: 'center',
       justifyContent: 'center',
+      backgroundColor: "#0B0C10"
     },
     brandContainer: {
 

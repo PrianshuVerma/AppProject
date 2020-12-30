@@ -65,10 +65,12 @@ const styles = StyleSheet.create({
     },
 
     logo: {
-      alignSelf: 'center',
-      height: 120,
-      width: 220,
-      marginTop: 50
+      alignSelf: 'left',
+      height: 100,
+      width: 190,
+      marginTop: 100,
+      marginLeft: 200,
+      resizeMode: "contain"
     },
 
     text:{
