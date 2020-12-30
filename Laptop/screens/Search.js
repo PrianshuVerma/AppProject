@@ -7,7 +7,7 @@ import DropDownPicker from 'react-native-dropdown-picker';
 const Search = ({navigation}) => {
   const [Brand, setBrand] = useState('All');
   
-  
+
 
   return (
     
@@ -156,6 +156,7 @@ const styles = StyleSheet.create({
     priceContainer: {
       zIndex: 1,
       marginTop: 60,
+      marginBottom: 20,
 
     },
   });
