@@ -18,16 +18,14 @@ const Home = ({navigation}) => {
 
             <View style = {styles.inputContainer}> 
                 <TextInput
-                style = {{flex:1, fontSize: 18, borderColor: '#66FCF1',
-                borderBottomWidth: 1, color: 'white'}}
+                style = {styles.username}
                 placeholder = 'Username'
                 placeholderTextColor = 'gray'/> 
             </View>
 
             <View style = {styles.input}> 
                 <TextInput
-                style = {{flex:1, fontSize: 18, borderColor: '#66FCF1',
-                borderBottomWidth: 1, color: 'white'}}
+                style = {styles.password}
                 placeholder = 'Password'
                 placeholderTextColor = 'gray'/> 
             </View>
@@ -156,7 +154,7 @@ const styles = StyleSheet.create({
     },
     inputContainer: {
       flex: 1,
-      maxHeight: 50,
+      maxHeight: 45,
       width: 350,
       borderRadius: 10,
       flexDirection: 'row',
@@ -164,14 +162,15 @@ const styles = StyleSheet.create({
       alignItems: 'center',
       paddingHorizontal: 20,
       color: 'white',
+      marginTop: 25,
       marginBottom: 15,
       //marginLeft: 35,
       alignSelf: 'center',
-      fontFamily: 'Verdana-Bold',
+      fontFamily: 'Verdana-Italic',
     },
     input: {
       flex: 1,
-      maxHeight: 50,
+      maxHeight: 45,
       width: 350,
       borderRadius: 10,
       flexDirection: 'row',
@@ -191,6 +190,26 @@ const styles = StyleSheet.create({
       fontSize: 28,
       marginTop: 50,
       marginLeft: 50
+    },
+    username: {
+
+      flex:1, 
+      fontSize: 14, 
+      borderColor: '#66FCF1',
+      borderBottomWidth: 1, 
+      color: 'white', 
+      fontFamily: 'Verdana-Italic'
+
+    },
+    password: {
+
+      flex:1, 
+      fontSize: 14, 
+      borderColor: '#66FCF1',
+      borderBottomWidth: 1, 
+      color: 'white',
+      fontFamily: 'Verdana-Italic'
+
     },
   });
 
