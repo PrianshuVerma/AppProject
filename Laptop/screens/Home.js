@@ -9,7 +9,7 @@ const image = { uri: "https://wallpaperaccess.com/full/1182654.png" };
 const Home = ({navigation}) => {
   return (
     <View style={styles.container}>
-          <Image source={require('./images/goku.jpg')} style={styles.logo} />
+          <Image source={require('./images/cloud.png')} style={styles.logo} />
             <TouchableOpacity 
                 onPress={() => navigation.navigate('Search Page')} 
                 style={styles.search}>
