@@ -15,9 +15,6 @@ const Home = ({navigation}) => {
                 style={styles.search}>
                 <Text style={styles.searchtext}>Go To Search Screen</Text>
             </TouchableOpacity>
-            <View>
-              <Text style = {styles.login}> Log the fuck in rn</Text>
-            </View>
 
             <View style = {styles.inputContainer}> 
                 <TextInput
@@ -33,6 +30,16 @@ const Home = ({navigation}) => {
                 borderBottomWidth: 1, color: 'white'}}
                 placeholder = 'Password'
                 placeholderTextColor = 'gray'/> 
+            </View>
+
+            <View>
+
+            <TouchableOpacity 
+                onPress={() => navigation.navigate('Search Page')} 
+                style={styles.loginBtn}>
+                <Text style={styles.logintext}>Login</Text>
+            </TouchableOpacity>
+
             </View>
     </View>
   );
@@ -105,8 +112,29 @@ const styles = StyleSheet.create({
       backgroundColor: "#0B0C10",
       borderColor: "#66FCF1",
       borderWidth: 1,   
+      marginBottom: 20,
     },
 
+    loginBtn:{
+      alignSelf:'center',
+      justifyContent: 'center',
+      width: 300,
+      height: 50,
+      borderRadius: 30,
+      marginBottom: 100,     
+      backgroundColor: "#0B0C10",
+      borderColor: "#66FCF1",
+      borderWidth: 1
+      //borderWidth: 1,   
+    },
+    logintext:{
+      justifyContent: 'center',
+      textAlign: 'center',
+      fontFamily: "Verdana-Bold",
+      fontSize: 20,
+      color: '#fff5ee'
+      //fontWeight: 'bold'
+    },
     register:{
       justifyContent: 'center',
       borderRadius:10,
@@ -149,14 +177,14 @@ const styles = StyleSheet.create({
       alignItems: 'center',
       paddingHorizontal: 20,
       color: 'white',
-      marginBottom: 250,
+      marginBottom: 150,
       marginLeft: 35,
       fontFamily: 'Verdana-Bold',
     },
     login: {
 
       fontFamily: 'Verdana-Bold',
-      color: '#66FCF1',
+      color: '#fff5ee',
       fontSize: 28,
       marginTop: 50,
       marginLeft: 50
