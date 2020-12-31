@@ -34,9 +34,9 @@ const Search = (props) => {
       <View
             style={{
               
-              flex:1,
-              alignItems: 'stretch',
-              width: '100%',
+            flex:1,
+            alignItems: 'stretch',
+            width: '100%',
             paddingVertical: 50,
             borderBottomColor: "#66FCF1",
             borderBottomWidth: 1,
