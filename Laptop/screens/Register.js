@@ -1,17 +1,23 @@
-import React from "react";
-import { Animated ,View, Text, StyleSheet, Image, TouchableOpacity, TextInput } from 'react-native';
+import React from 'react';
+import { View, Text, StyleSheet, Image, TouchableOpacity, TextInput } from 'react-native';
+import Icon from 'react-native-vector-icons/MaterialIcons';
 
-//const image = { uri: "https://wallpaperaccess.com/full/1182654.png" };
-
-const image = { uri: "https://wallpaperaccess.com/full/1182654.png" };
-
-
-const Home = ({navigation}) => {
+const Register = ({navigation}) => {
   return (
     <View style={styles.container}>
-          <Image source={require('./images/logo.png')} style={styles.logo} />
+
+            <View style = {styles.head}> 
+                <Text style ={styles.text}>Sign Up</Text>
+            </View>
 
             <View style = {styles.inputContainer}> 
+                <TextInput
+                style = {styles.username}
+                placeholder = 'Email'
+                placeholderTextColor = 'gray'/> 
+            </View>
+
+            <View style = {styles.input}> 
                 <TextInput
                 style = {styles.username}
                 placeholder = 'Username'
@@ -25,26 +31,20 @@ const Home = ({navigation}) => {
                 placeholderTextColor = 'gray'/> 
             </View>
 
+            <View style = {styles.input}> 
+                <TextInput
+                style = {styles.password}
+                placeholder = 'Confirm Password'
+                placeholderTextColor = 'gray'/> 
+            </View>
+
             <View>
 
             <TouchableOpacity 
                 onPress={() => navigation.navigate('Search Page')} 
                 style={styles.loginBtn}>
-                <Text style={styles.logintext}>Login</Text>
+                <Text style={styles.logintext}>Sign Up</Text>
             </TouchableOpacity>
-
-            <View style ={styles.signUpView}>
-              <Text style={styles.signUpText}>
-                Don't have an account?
-              </Text>
-
-              <TouchableOpacity>
-                <Text style = {styles.signUp}> Sign up here</Text>
-              </TouchableOpacity>
-
-
-            </View>
-
 
             </View>
     </View>
@@ -59,42 +59,54 @@ const styles = StyleSheet.create({
       flexDirection: "column",
       backgroundColor: '#0B0C10',
     },
+  
+    head: {
+        marginLeft: 0,
+        flexDirection: "column",
+        alignSelf: 'center',
+        marginTop: 50
+      },
+
+    horizontal: {
+      marginTop: 300,
+      alignSelf: 'center',
+      flexDirection: "row"
+    },
+
+    image: {
+        flex: 1,
+        resizeMode: "cover",
+        justifyContent: "center"
+    },
 
     logo: {
       alignSelf: 'center',
-      //marginRight: 225,
+      marginRight: 225,
       height: 100,
       width: 190,
-      marginTop: 200,
+      marginTop: 100,
       resizeMode: "contain"
     },
 
     text:{
-        alignSelf: "center",
+        textAlign: 'left',
         fontFamily: "Verdana-Bold",
-        fontSize: 30,
+        fontSize: 40,
         color: "#66FCF1"
     },
 
-    signUpText:{
-
-      fontFamily: "Verdana",
-      fontSize: 15,
-      color: 'gray',
+    registertext:{
+      alignSelf: "center",
+      fontFamily: "Verdana-Bold",
+      fontSize: 20,
+      color: '#ffffff'
     },
 
-    signUpView: {
-
-      flexDirection: 'row', 
-      marginTop: 275, 
-      alignSelf :'center'
-    },
-
-    signUp: {
-
-      fontFamily: "Verdana",
-      fontSize: 15,
-      color: '#66FCF1',
+    signintext:{
+      alignSelf: "center",
+      fontFamily: "Verdana-Bold",
+      fontSize: 20,
+      color: '#000000'
     },
     
     searchtext:{
@@ -139,7 +151,24 @@ const styles = StyleSheet.create({
       color: '#fff5ee'
       //fontWeight: 'bold'
     },
+    register:{
+      justifyContent: 'center',
+      borderRadius:10,
+      width: 120,
+      height:50,
+      alignSelf: 'flex-end',
+      marginLeft: 60,     
+      backgroundColor: "#696969",      
+    },
 
+    signin:{
+      justifyContent: 'center',
+      borderRadius:10,
+      width: 120,
+      height:50,
+      alignSelf: 'flex-start',
+      backgroundColor: "#ffffff",
+    },
     inputContainer: {
       flex: 1,
       maxHeight: 45,
@@ -151,14 +180,13 @@ const styles = StyleSheet.create({
       paddingHorizontal: 20,
       color: 'white',
       marginTop: 25,
-      marginBottom: 25,
       //marginLeft: 35,
       alignSelf: 'center',
       fontFamily: 'Verdana-Italic',
     },
     input: {
       flex: 1,
-      height: 70,
+      maxHeight: 45,
       width: 350,
       borderRadius: 10,
       flexDirection: 'row',
@@ -166,12 +194,18 @@ const styles = StyleSheet.create({
       alignItems: 'center',
       paddingHorizontal: 20,
       color: 'white',
-      //marginBottom: 20,
-      //marginLeft: 35,
+      marginTop: 15,
       alignSelf: 'center',
       fontFamily: 'Verdana-Bold',
     },
+    login: {
 
+      fontFamily: 'Verdana-Bold',
+      color: '#fff5ee',
+      fontSize: 28,
+      marginTop: 50,
+      marginLeft: 50
+    },
     username: {
 
       flex:1, 
@@ -194,4 +228,4 @@ const styles = StyleSheet.create({
     },
   });
 
-  export default Home;
+  export default Register;
