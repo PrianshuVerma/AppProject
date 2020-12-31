@@ -28,14 +28,16 @@ const Register = ({navigation}) => {
                 <TextInput
                 style = {styles.password}
                 placeholder = 'Password'
-                placeholderTextColor = 'gray'/> 
+                placeholderTextColor = 'gray'
+                secureTextEntry = {true}/> 
             </View>
 
             <View style = {styles.input}> 
                 <TextInput
                 style = {styles.password}
                 placeholder = 'Confirm Password'
-                placeholderTextColor = 'gray'/> 
+                placeholderTextColor = 'gray'
+                secureTextEntry = {true}/> 
             </View>
 
             <View>
