@@ -1,10 +1,10 @@
-import React from 'react';
-import { View, Text, StyleSheet, Image, TouchableOpacity, TextInput } from 'react-native';
-import Icon from 'react-native-vector-icons/MaterialIcons';
+import React from "react";
+import { Animated ,View, Text, StyleSheet, Image, TouchableOpacity, TextInput } from 'react-native';
 
 //const image = { uri: "https://wallpaperaccess.com/full/1182654.png" };
 
 const image = { uri: "https://wallpaperaccess.com/full/1182654.png" };
+
 
 const Home = ({navigation}) => {
   return (
@@ -32,6 +32,19 @@ const Home = ({navigation}) => {
                 style={styles.loginBtn}>
                 <Text style={styles.logintext}>Login</Text>
             </TouchableOpacity>
+
+            <View style ={styles.signUpView}>
+              <Text style={styles.signUpText}>
+                Don't have an account?
+              </Text>
+
+              <TouchableOpacity>
+                <Text style = {styles.signUp}> Sign up here</Text>
+              </TouchableOpacity>
+
+
+            </View>
+
 
             </View>
     </View>
@@ -63,18 +76,25 @@ const styles = StyleSheet.create({
         color: "#66FCF1"
     },
 
-    registertext:{
-      alignSelf: "center",
-      fontFamily: "Verdana-Bold",
-      fontSize: 20,
-      color: '#ffffff'
+    signUpText:{
+
+      fontFamily: "Verdana",
+      fontSize: 15,
+      color: 'gray',
     },
 
-    signintext:{
-      alignSelf: "center",
-      fontFamily: "Verdana-Bold",
-      fontSize: 20,
-      color: '#000000'
+    signUpView: {
+
+      flexDirection: 'row', 
+      marginTop: 275, 
+      alignSelf :'center'
+    },
+
+    signUp: {
+
+      fontFamily: "Verdana",
+      fontSize: 15,
+      color: '#66FCF1',
     },
     
     searchtext:{
