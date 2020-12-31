@@ -1,5 +1,5 @@
-import React, {useState} from 'react';
-import { View, Text, StyleSheet, Button } from 'react-native';
+import React, {useState, Component} from 'react';
+import { View, Text, StyleSheet, Button, ScrollView} from 'react-native';
 import Icon from 'react-native-vector-icons/Feather';
 import {Picker} from '@react-native-picker/picker';
 import DropDownPicker from 'react-native-dropdown-picker';
@@ -29,7 +29,22 @@ const Search = ({navigation}) => {
   return (
     
     <View style={styles.container}>
-      <Text>This is the Search Page {Brand}, {Ram}, {Processor}, {Hardrive}, {Storage}, {Price}</Text>
+      <ScrollView 
+      showsVerticalScrollIndicator ={false} 
+      showsHorizontalScrollIndicator ={false}
+      >
+          <View
+            style={{
+              
+              flex:1,
+              alignItems: 'stretch',
+              width: '100%',
+            paddingVertical: 50,
+            borderBottomColor: 'white',
+            borderBottomWidth: 1,
+            }}
+          />
+      <Text style= {{color: 'white'}}>This is the Search Page {Brand}, {Ram}, {Processor}, {Hardrive}, {Storage}, {Price}</Text>
 
       <View style = {styles.brandContainer}>
       <DropDownPicker
@@ -44,9 +59,9 @@ const Search = ({navigation}) => {
           {label: "Dell",             value: "dell"},
 
         ]}
-        style= {{ backgroundColor: '#282828', borderColor: "#66FCF1", baseColor: "white"}}
-        labelStyle= {{ fontSize: 14, textAlign: 'left', color: 'white'}}
-        dropDownStyle= {{ backgroundColor: '#282828', borderColor: "#66FCF1",}}
+        style= {{ backgroundColor: '#282828', borderColor: "#66FCF1", baseColor: "white", fontSize: 17}}
+        labelStyle= {{ fontSize: 17, textAlign: 'left', color: 'white'}}
+        dropDownStyle= {{ backgroundColor: '#282828', borderColor: "#66FCF1", }}
         defaultIndex= {0}
         containerStyle={ {height: 60, width: 275, alignSelf: "center",}}
         placeholder= {"Select Brand..."}
@@ -66,7 +81,7 @@ const Search = ({navigation}) => {
         ]}
         placeholder= {"Select Ram..."}
         style= {{ backgroundColor: '#282828', borderColor: "#66FCF1", baseColor: "white"}}
-        labelStyle= {{ fontSize: 14, textAlign: 'left', color: 'white'}}
+        labelStyle= {{ fontSize: 17, textAlign: 'left', color: 'white'}}
         dropDownStyle= {{ backgroundColor: '#282828', borderColor: "#66FCF1",}}
         defaultIndex= {0}
         containerStyle={ {height: 60, width: 275, alignSelf: "center",}}
@@ -92,7 +107,7 @@ const Search = ({navigation}) => {
         ]}
         placeholder= {"Select Processor..."}
         style= {{ backgroundColor: '#282828', borderColor: "#66FCF1", baseColor: "white"}}
-        labelStyle= {{ fontSize: 14, textAlign: 'left', color: 'white'}}
+        labelStyle= {{ fontSize: 17, textAlign: 'left', color: 'white'}}
         dropDownStyle= {{ backgroundColor: '#282828', borderColor: "#66FCF1",}}
         defaultIndex= {0}
         containerStyle={ {height: 60, width: 275, alignSelf: "center",}}
@@ -109,7 +124,7 @@ const Search = ({navigation}) => {
         ]}
         placeholder= {"Select Hardrive..."}
         style= {{ backgroundColor: '#282828', borderColor: "#66FCF1", baseColor: "white"}}
-        labelStyle= {{ fontSize: 14, textAlign: 'left', color: 'white'}}
+        labelStyle= {{ fontSize: 17, textAlign: 'left', color: 'white'}}
         dropDownStyle= {{ backgroundColor: '#282828', borderColor: "#66FCF1",}}
         defaultIndex= {0}
         containerStyle={ {height: 60, width: 275, alignSelf: "center",}}
@@ -130,7 +145,7 @@ const Search = ({navigation}) => {
         ]}
         placeholder= {"Select Storage..."}
         style= {{ backgroundColor: '#282828', borderColor: "#66FCF1", baseColor: "white"}}
-        labelStyle= {{ fontSize: 14, textAlign: 'left', color: 'white'}}
+        labelStyle= {{ fontSize: 17, textAlign: 'left', color: 'white'}}
         dropDownStyle= {{ backgroundColor: '#282828', borderColor: "#66FCF1",}}
         defaultIndex= {0}
         containerStyle={ {height: 60, width: 275, alignSelf: "center",}}
@@ -151,7 +166,7 @@ const Search = ({navigation}) => {
         ]}
         placeholder= {"Select Price..."}
         style= {{ backgroundColor: '#282828', borderColor: "#66FCF1", baseColor: "white"}}
-        labelStyle= {{ fontSize: 14, textAlign: 'left', color: 'white'}}
+        labelStyle= {{ fontSize: 17, textAlign: 'left', color: 'white'}}
         dropDownStyle= {{ backgroundColor: '#282828', borderColor: "#66FCF1",}}
         defaultIndex= {0}
         containerStyle={ {height: 60, width: 275, alignSelf: "center",}}
@@ -164,6 +179,7 @@ const Search = ({navigation}) => {
                 title="View Result"
                 onPress={() => navigation.navigate('Result Page')}
             />
+            </ScrollView>
     </View>
   );
 };
@@ -175,6 +191,10 @@ const styles = StyleSheet.create({
       alignItems: 'center',
       justifyContent: 'center',
       backgroundColor: "#0B0C10"
+    },
+
+    Scroll: {
+      paddingVertical: 50
     },
     brandContainer: {
 
@@ -208,7 +228,7 @@ const styles = StyleSheet.create({
     priceContainer: {
       zIndex: 1,
       marginTop: 60,
-      marginBottom: 20,
+      marginBottom: 50,
 
     },
   });
