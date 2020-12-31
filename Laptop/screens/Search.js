@@ -40,11 +40,12 @@ const Search = ({route, navigation}) => {
       
       <View
             style={{
-              
+            
+            
             flex:1,
             alignItems: 'stretch',
             width: '100%',
-            paddingVertical: '0%',
+            paddingVertical: 3,
             borderBottomColor: "#66FCF1",
             borderBottomWidth: 1,
             }}
@@ -249,13 +250,13 @@ const styles = StyleSheet.create({
       fontWeight: "bold",
       color: "white",
       fontSize: 30,
-      paddingTop: 60,
+      paddingTop: 30,
       alignSelf: "baseline",
       paddingLeft: 50
     },
 
     askContainer: {
-      paddingTop: '1%',
+      paddingTop: 10,
       fontFamily: "TimesNewRoman",
       color: "white",
       alignSelf: "baseline",
