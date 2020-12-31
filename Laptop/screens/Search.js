@@ -35,6 +35,8 @@ const Search = (props) => {
   
         <Text style={styles.greetingContainer}> Hello Prianshu,</Text>
 
+        <Text style={styles.askContainer}> Please select what you would like</Text>
+
       
       <View
             style={{
@@ -42,7 +44,7 @@ const Search = (props) => {
             flex:1,
             alignItems: 'stretch',
             width: '100%',
-            paddingVertical: 50,
+            paddingVertical: '0%',
             borderBottomColor: "#66FCF1",
             borderBottomWidth: 1,
             }}
@@ -171,7 +173,7 @@ const Search = (props) => {
           {label: "$2000.00 and Higher",  value: "premium" },
 
         ]}
-        
+
         placeholder= {"Select Price..."}
         style= {{ backgroundColor: '#282828', borderColor: "#66FCF1", baseColor: "white"}}
         labelStyle= {{ fontSize: 17, textAlign: 'left', color: 'white'}}
@@ -233,6 +235,7 @@ const styles = StyleSheet.create({
       marginTop: 60,
 
     },
+
     priceContainer: {
       zIndex: 1,
       marginTop: 60,
@@ -240,14 +243,23 @@ const styles = StyleSheet.create({
 
     },
 
+
     greetingContainer: {
-      fontFamily: "serif",
+      fontFamily: "TimesNewRoman",
       fontWeight: "bold",
       color: "white",
       fontSize: 30,
-      paddingTop: '10%',
+      paddingTop: 60,
       alignSelf: "baseline",
-      paddingLeft: '10%'
+      paddingLeft: 50
+    },
+
+    askContainer: {
+      paddingTop: '1%',
+      fontFamily: "TimesNewRoman",
+      color: "white",
+      alignSelf: "baseline",
+      paddingLeft: 55
     }
 
   });
