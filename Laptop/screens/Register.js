@@ -250,7 +250,7 @@ const styles = StyleSheet.create({
       borderColor: '#66FCF1',
       borderBottomWidth: 1, 
       color: 'white', 
-      fontFamily: 'Verdana-Italic'
+      fontFamily: 'Verdana'
 
     },
     password: {
@@ -260,7 +260,7 @@ const styles = StyleSheet.create({
       borderColor: '#66FCF1',
       borderBottomWidth: 1, 
       color: 'white',
-      fontFamily: 'Verdana-Italic'
+      fontFamily: 'Verdana'
 
     },
   });
