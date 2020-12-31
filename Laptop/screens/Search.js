@@ -31,6 +31,11 @@ const Search = (props) => {
   return (
     
     <View style={styles.container}>
+
+  
+        <Text style={styles.greetingContainer}> Hello Prianshu,</Text>
+
+      
       <View
             style={{
               
@@ -44,11 +49,9 @@ const Search = (props) => {
           />
 
       <ScrollView 
-      showsVerticalScrollIndicator ={false} 
-      showsHorizontalScrollIndicator ={false}
+        showsVerticalScrollIndicator ={false} 
+        showsHorizontalScrollIndicator ={false}
       >
-          
-      <Text style= {{color: 'white'}}>This is the Search Page </Text>
 
       <View style = {styles.brandContainer}>
       <DropDownPicker
@@ -168,6 +171,7 @@ const Search = (props) => {
           {label: "$2000.00 and Higher",  value: "premium" },
 
         ]}
+        
         placeholder= {"Select Price..."}
         style= {{ backgroundColor: '#282828', borderColor: "#66FCF1", baseColor: "white"}}
         labelStyle= {{ fontSize: 17, textAlign: 'left', color: 'white'}}
@@ -235,6 +239,17 @@ const styles = StyleSheet.create({
       marginBottom: 50,
 
     },
+
+    greetingContainer: {
+      fontFamily: "serif",
+      fontWeight: "bold",
+      color: "white",
+      fontSize: 30,
+      paddingTop: '10%',
+      alignSelf: "baseline",
+      paddingLeft: '10%'
+    }
+
   });
    
 export default Search;
