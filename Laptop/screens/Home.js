@@ -22,6 +22,7 @@ const Home = ({navigation}) => {
                 <TextInput
                 style = {styles.password}
                 placeholder = 'Password'
+                secureTextEntry = {true}
                 placeholderTextColor = 'gray'/> 
             </View>
 
@@ -86,7 +87,7 @@ const styles = StyleSheet.create({
     signUpView: {
 
       flexDirection: 'row', 
-      marginTop: 275, 
+      marginTop: 225, 
       alignSelf :'center'
     },
 
@@ -154,7 +155,7 @@ const styles = StyleSheet.create({
       marginBottom: 25,
       //marginLeft: 35,
       alignSelf: 'center',
-      fontFamily: 'Verdana-Italic',
+      fontFamily: 'Verdana',
     },
     input: {
       flex: 1,
@@ -169,7 +170,8 @@ const styles = StyleSheet.create({
       //marginBottom: 20,
       //marginLeft: 35,
       alignSelf: 'center',
-      fontFamily: 'Verdana-Bold',
+      fontFamily: 'Verdana',
+
     },
 
     username: {
@@ -179,7 +181,7 @@ const styles = StyleSheet.create({
       borderColor: '#66FCF1',
       borderBottomWidth: 1, 
       color: 'white', 
-      fontFamily: 'Verdana-Italic'
+      fontFamily: 'Verdana'
 
     },
     password: {
@@ -189,7 +191,7 @@ const styles = StyleSheet.create({
       borderColor: '#66FCF1',
       borderBottomWidth: 1, 
       color: 'white',
-      fontFamily: 'Verdana-Italic'
+      fontFamily: 'Verdana',
 
     },
   });

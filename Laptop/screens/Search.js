@@ -36,9 +36,9 @@ const Search = ({navigation}) => {
           <View
             style={{
               
-              flex:1,
-              alignItems: 'stretch',
-              width: '100%',
+            flex:1,
+            alignItems: 'stretch',
+            width: '100%',
             paddingVertical: 50,
             borderBottomColor: 'white',
             borderBottomWidth: 1,
