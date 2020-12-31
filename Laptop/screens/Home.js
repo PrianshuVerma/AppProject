@@ -42,7 +42,6 @@ const Home = ({navigation}) => {
               <TouchableOpacity 
                 onPress={() => navigation.navigate('Register Page')} 
                 >
-                
                 <Text style = {styles.signUp}> Sign up here</Text>
               </TouchableOpacity>
 
@@ -162,7 +161,7 @@ const styles = StyleSheet.create({
     },
     input: {
       flex: 1,
-      height: 70,
+      maxHeight: 45,
       width: 350,
       borderRadius: 10,
       flexDirection: 'row',
