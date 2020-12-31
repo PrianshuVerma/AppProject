@@ -1,10 +1,10 @@
-import React from 'react';
-import { View, Text, StyleSheet, Image, TouchableOpacity, TextInput } from 'react-native';
-import Icon from 'react-native-vector-icons/MaterialIcons';
+import React from "react";
+import { Animated ,View, Text, StyleSheet, Image, TouchableOpacity, TextInput } from 'react-native';
 
 //const image = { uri: "https://wallpaperaccess.com/full/1182654.png" };
 
 const image = { uri: "https://wallpaperaccess.com/full/1182654.png" };
+
 
 const Home = ({navigation}) => {
   return (
@@ -33,6 +33,19 @@ const Home = ({navigation}) => {
                 <Text style={styles.logintext}>Login</Text>
             </TouchableOpacity>
 
+            <View style ={styles.signUpView}>
+              <Text style={styles.signUpText}>
+                Don't have an account?
+              </Text>
+
+              <TouchableOpacity>
+                <Text style = {styles.signUp}> Sign up here</Text>
+              </TouchableOpacity>
+
+
+            </View>
+
+
             </View>
     </View>
   );
@@ -46,25 +59,13 @@ const styles = StyleSheet.create({
       flexDirection: "column",
       backgroundColor: '#0B0C10',
     },
-  
-    horizontal: {
-      marginTop: 300,
-      alignSelf: 'center',
-      flexDirection: "row"
-    },
-
-    image: {
-        flex: 1,
-        resizeMode: "cover",
-        justifyContent: "center"
-    },
 
     logo: {
       alignSelf: 'center',
-      marginRight: 225,
+      //marginRight: 225,
       height: 100,
       width: 190,
-      marginTop: 100,
+      marginTop: 200,
       resizeMode: "contain"
     },
 
@@ -75,18 +76,25 @@ const styles = StyleSheet.create({
         color: "#66FCF1"
     },
 
-    registertext:{
-      alignSelf: "center",
-      fontFamily: "Verdana-Bold",
-      fontSize: 20,
-      color: '#ffffff'
+    signUpText:{
+
+      fontFamily: "Verdana",
+      fontSize: 15,
+      color: 'gray',
     },
 
-    signintext:{
-      alignSelf: "center",
-      fontFamily: "Verdana-Bold",
-      fontSize: 20,
-      color: '#000000'
+    signUpView: {
+
+      flexDirection: 'row', 
+      marginTop: 275, 
+      alignSelf :'center'
+    },
+
+    signUp: {
+
+      fontFamily: "Verdana",
+      fontSize: 15,
+      color: '#66FCF1',
     },
     
     searchtext:{
@@ -131,24 +139,7 @@ const styles = StyleSheet.create({
       color: '#fff5ee'
       //fontWeight: 'bold'
     },
-    register:{
-      justifyContent: 'center',
-      borderRadius:10,
-      width: 120,
-      height:50,
-      alignSelf: 'flex-end',
-      marginLeft: 60,     
-      backgroundColor: "#696969",      
-    },
 
-    signin:{
-      justifyContent: 'center',
-      borderRadius:10,
-      width: 120,
-      height:50,
-      alignSelf: 'flex-start',
-      backgroundColor: "#ffffff",
-    },
     inputContainer: {
       flex: 1,
       maxHeight: 45,
@@ -160,7 +151,7 @@ const styles = StyleSheet.create({
       paddingHorizontal: 20,
       color: 'white',
       marginTop: 25,
-      marginBottom: 15,
+      marginBottom: 25,
       //marginLeft: 35,
       alignSelf: 'center',
       fontFamily: 'Verdana-Italic',
@@ -180,14 +171,7 @@ const styles = StyleSheet.create({
       alignSelf: 'center',
       fontFamily: 'Verdana-Bold',
     },
-    login: {
 
-      fontFamily: 'Verdana-Bold',
-      color: '#fff5ee',
-      fontSize: 28,
-      marginTop: 50,
-      marginLeft: 50
-    },
     username: {
 
       flex:1, 
