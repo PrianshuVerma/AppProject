@@ -14,7 +14,7 @@ const Home = ({navigation}) => {
 
         showsVerticalScrollIndicator ={true} 
         showsHorizontalScrollIndicator ={false}
-      />
+      >
       <View style = {styles.circle}> 
         </View>
         <Image source={require('./images/logo.png')} style={styles.logo} />
@@ -57,6 +57,7 @@ const Home = ({navigation}) => {
 
 
             </View>
+            </ScrollView>
     </View>
   );
 };

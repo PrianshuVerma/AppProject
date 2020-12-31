@@ -4,7 +4,9 @@ import Icon from 'react-native-vector-icons/Feather';
 import {Picker} from '@react-native-picker/picker';
 import DropDownPicker from 'react-native-dropdown-picker';
 
-const Search = ({navigation}) => {
+const Search = (props) => {
+
+  //const item = props.navigation.getParam('data')
 
   // used for the first picker for the brand of the laptop
   const [Brand, setBrand] = useState('any');
@@ -29,36 +31,43 @@ const Search = ({navigation}) => {
   return (
     
     <View style={styles.container}>
-      <ScrollView 
-      showsVerticalScrollIndicator ={false} 
-      showsHorizontalScrollIndicator ={false}
-      >
-          <View
+
+  
+        <Text style={styles.greetingContainer}> Hello Prianshu,</Text>
+
+        <Text style={styles.askContainer}> Please select what you would like</Text>
+
+      
+      <View
             style={{
               
             flex:1,
             alignItems: 'stretch',
             width: '100%',
-            paddingVertical: 50,
-            borderBottomColor: 'white',
+            paddingVertical: '0%',
+            borderBottomColor: "#66FCF1",
             borderBottomWidth: 1,
             }}
           />
-      <Text style= {{color: 'white'}}>This is the Search Page {Brand}, {Ram}, {Processor}, {Hardrive}, {Storage}, {Price}</Text>
+
+      <ScrollView 
+        showsVerticalScrollIndicator ={false} 
+        showsHorizontalScrollIndicator ={false}
+      >
 
       <View style = {styles.brandContainer}>
       <DropDownPicker
         items={[
           {label: "Any",              value: "any"},
           {label: 'Mac',              value: 'mac'},
-          {label: 'Window',           value: 'window'},
+          {label: 'Windows',           value: 'window'},
           {label: "Hewlett-Packard",  value: "hp" },
           {label:"Asus",              value: "asus"},
           {label:"Acer",              value: "acer"},
           {label:"Microsoft",         value: "microsoft" },
           {label: "Dell",             value: "dell"},
-
         ]}
+               
         style= {{ backgroundColor: '#282828', borderColor: "#66FCF1", baseColor: "white", fontSize: 17}}
         labelStyle= {{ fontSize: 17, textAlign: 'left', color: 'white'}}
         dropDownStyle= {{ backgroundColor: '#282828', borderColor: "#66FCF1", }}
@@ -164,6 +173,7 @@ const Search = ({navigation}) => {
           {label: "$2000.00 and Higher",  value: "premium" },
 
         ]}
+
         placeholder= {"Select Price..."}
         style= {{ backgroundColor: '#282828', borderColor: "#66FCF1", baseColor: "white"}}
         labelStyle= {{ fontSize: 17, textAlign: 'left', color: 'white'}}
@@ -225,12 +235,33 @@ const styles = StyleSheet.create({
       marginTop: 60,
 
     },
+
     priceContainer: {
       zIndex: 1,
       marginTop: 60,
       marginBottom: 50,
 
     },
+
+
+    greetingContainer: {
+      fontFamily: "TimesNewRoman",
+      fontWeight: "bold",
+      color: "white",
+      fontSize: 30,
+      paddingTop: 60,
+      alignSelf: "baseline",
+      paddingLeft: 50
+    },
+
+    askContainer: {
+      paddingTop: '1%',
+      fontFamily: "TimesNewRoman",
+      color: "white",
+      alignSelf: "baseline",
+      paddingLeft: 55
+    }
+
   });
    
 export default Search;
