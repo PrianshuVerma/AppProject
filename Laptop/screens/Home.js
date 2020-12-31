@@ -111,7 +111,7 @@ const styles = StyleSheet.create({
     signUpView: {
 
       flexDirection: 'row', 
-      marginTop: 225, 
+      marginTop: 150, 
       alignSelf :'center',
       paddingBottom: '10%'
     },
