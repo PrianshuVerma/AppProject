@@ -1,5 +1,5 @@
 import React from "react";
-import { Animated ,View, Text, StyleSheet, Image, TouchableOpacity, TextInput } from 'react-native';
+import { ScrollView ,View, Text, StyleSheet, Image, TouchableOpacity, TextInput } from 'react-native';
 
 //const image = { uri: "https://wallpaperaccess.com/full/1182654.png" };
 
@@ -9,6 +9,12 @@ const image = { uri: "https://wallpaperaccess.com/full/1182654.png" };
 const Home = ({navigation}) => {
   return (
     <View style={styles.container}>
+
+      <ScrollView 
+
+        showsVerticalScrollIndicator ={true} 
+        showsHorizontalScrollIndicator ={false}
+      />
       <View style = {styles.circle}> 
         </View>
         <Image source={require('./images/logo.png')} style={styles.logo} />
@@ -107,6 +113,7 @@ const styles = StyleSheet.create({
       flexDirection: 'row', 
       marginTop: 225, 
       alignSelf :'center',
+      paddingBottom: '10%'
     },
 
     signUp: {
@@ -160,7 +167,7 @@ const styles = StyleSheet.create({
     },
 
     inputContainer: {
-      flex: 1,
+      flex: 3,
       maxHeight: 45,
       width: 350,
       borderRadius: 10,
@@ -170,13 +177,15 @@ const styles = StyleSheet.create({
       paddingHorizontal: 20,
       color: 'white',
       marginTop: 25,
+      paddingTop: '1%',
+      paddingBottom: '1%',
       marginBottom: 25,
       //marginLeft: 35,
       alignSelf: 'center',
       fontFamily: 'Verdana',
     },
     input: {
-      flex: 1,
+      flex: 3,
       maxHeight: 45,
       width: 350,
       borderRadius: 10,
@@ -185,7 +194,9 @@ const styles = StyleSheet.create({
       alignItems: 'center',
       paddingHorizontal: 20,
       color: 'white',
-      //marginBottom: 20,
+      marginBottom: 20,
+      paddingTop: '1%',
+      paddingBottom: '1%',
       //marginLeft: 35,
       alignSelf: 'center',
       fontFamily: 'Verdana',
