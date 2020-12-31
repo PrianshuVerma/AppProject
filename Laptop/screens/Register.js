@@ -47,11 +47,48 @@ const Register = ({navigation}) => {
             </TouchableOpacity>
 
             </View>
+
+            <View style ={styles.signUpView}>
+              <Text style={styles.signUpText}>
+                Already have an account?
+              </Text>
+
+              <TouchableOpacity 
+                onPress={() => navigation.navigate('Home Page')} 
+                style={styles.loginBtn}>
+                
+                <Text style = {styles.signUp}> Login here</Text>
+              </TouchableOpacity>
+
+
+            </View>
+
     </View>
   );
 };
 
 const styles = StyleSheet.create({
+
+    signUpText:{
+
+        fontFamily: "Verdana",
+        fontSize: 15,
+        color: 'gray',
+      },
+  
+      signUpView: {
+  
+        flexDirection: 'row', 
+        marginTop: 275, 
+        alignSelf :'center'
+      },
+  
+      signUp: {
+  
+        fontFamily: "Verdana",
+        fontSize: 15,
+        color: '#66FCF1',
+      },
 
     container: {
       flex: 1,
