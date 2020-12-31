@@ -9,8 +9,9 @@ const image = { uri: "https://wallpaperaccess.com/full/1182654.png" };
 const Home = ({navigation}) => {
   return (
     <View style={styles.container}>
-          <Image source={require('./images/logo.png')} style={styles.logo} />
-
+      <View style = {styles.circle}> 
+        </View>
+        <Image source={require('./images/logo.png')} style={styles.logo} />
             <View style = {styles.inputContainer}> 
                 <TextInput
                 style = {styles.username}
@@ -56,6 +57,18 @@ const Home = ({navigation}) => {
 
 const styles = StyleSheet.create({
 
+  circle: {
+    width: 200,
+    height: 200,
+    borderRadius: 200 / 2,
+    backgroundColor: "#0B0C10",
+    borderColor: '#66FCF1',
+    borderWidth: 1,
+    alignSelf: 'center',
+    marginTop: 150,
+    //marginBottom: 50
+  },
+
     container: {
       flex: 1,
       alignContent: 'center',
@@ -68,8 +81,11 @@ const styles = StyleSheet.create({
       //marginRight: 225,
       height: 100,
       width: 190,
-      marginTop: 200,
-      resizeMode: "contain"
+      marginTop: -150,
+      resizeMode: "contain",
+      //flexDirection: 'row'
+      marginBottom: 50
+
     },
 
     text:{
@@ -90,7 +106,7 @@ const styles = StyleSheet.create({
 
       flexDirection: 'row', 
       marginTop: 225, 
-      alignSelf :'center'
+      alignSelf :'center',
     },
 
     signUp: {
