@@ -1,5 +1,5 @@
-import React from "react";
-import { ScrollView ,View, Text, StyleSheet, Image, TouchableOpacity, TextInput } from 'react-native';
+import React, {useState} from "react";
+import { ScrollView ,View, Text, StyleSheet, Image, TouchableOpacity, TextInput} from 'react-native';
 
 //const image = { uri: "https://wallpaperaccess.com/full/1182654.png" };
 
@@ -7,7 +7,11 @@ const image = { uri: "https://wallpaperaccess.com/full/1182654.png" };
 
 
 const Home = ({navigation}) => {
+
+  const [Homename, setHomename] = useState('any');
+  
   return (
+    
     <View style={styles.container}>
 
       <ScrollView 
@@ -21,7 +25,8 @@ const Home = ({navigation}) => {
             <View style = {styles.inputContainer}> 
                 <TextInput
                 style = {styles.username}
-                placeholder = 'Username'
+                onChangeText = {text => setHomename(text)}
+                placeholder=  'Username'
                 placeholderTextColor = 'gray'/> 
             </View>
 
@@ -36,7 +41,7 @@ const Home = ({navigation}) => {
             <View>
 
             <TouchableOpacity 
-                onPress={() => navigation.navigate('Search Page')} 
+                onPress={() => navigation.navigate('Search Page', { paramKey: Homename,})} 
                 style={styles.loginBtn}>
                 <Text style={styles.logintext}>Login</Text>
             </TouchableOpacity>
@@ -57,6 +62,7 @@ const Home = ({navigation}) => {
 
 
             </View>
+
             </ScrollView>
     </View>
   );

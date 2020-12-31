@@ -14,6 +14,8 @@ const RootStack = createStackNavigator(
 );
 
 const App = () => {
+
+
   return (
     <NavigationContainer>
             <RootStack.Navigator>

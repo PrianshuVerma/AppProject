@@ -4,7 +4,7 @@ import Icon from 'react-native-vector-icons/Feather';
 import {Picker} from '@react-native-picker/picker';
 import DropDownPicker from 'react-native-dropdown-picker';
 
-const Search = (props) => {
+const Search = ({route, navigation}) => {
 
   //const item = props.navigation.getParam('data')
 
@@ -33,7 +33,7 @@ const Search = (props) => {
     <View style={styles.container}>
 
   
-        <Text style={styles.greetingContainer}> Hello Prianshu,</Text>
+        <Text style={styles.greetingContainer}> Hello Prianshu, {route.params.paramKey} </Text>
 
         <Text style={styles.askContainer}> Please select what you would like</Text>
 
