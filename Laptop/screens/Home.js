@@ -40,7 +40,7 @@ const Home = ({navigation}) => {
 
               <TouchableOpacity 
                 onPress={() => navigation.navigate('Register Page')} 
-                style={styles.loginBtn}>
+                >
                 
                 <Text style = {styles.signUp}> Sign up here</Text>
               </TouchableOpacity>

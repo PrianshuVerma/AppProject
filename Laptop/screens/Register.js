@@ -55,9 +55,9 @@ const Register = ({navigation}) => {
 
               <TouchableOpacity 
                 onPress={() => navigation.navigate('Home Page')} 
-                style={styles.loginBtn}>
+                >
                 
-                <Text style = {styles.signUp}> Login here</Text>
+                <Text style = {styles.signUp}> Login here </Text>
               </TouchableOpacity>
 
 
