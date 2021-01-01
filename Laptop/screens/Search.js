@@ -187,9 +187,10 @@ const Search = ({route, navigation}) => {
         <TouchableOpacity 
             onPress={() => navigation.navigate('Result Page')} 
             style={styles.resultBtn}>
-            <Text style={styles.resultText}>Results</Text>
+            <Text style={styles.resultText}>View Results</Text>
           </TouchableOpacity>
          </View>
+
             </ScrollView>
     </View>
   );
