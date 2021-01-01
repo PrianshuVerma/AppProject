@@ -1,9 +1,13 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { View, Text, StyleSheet, Image, TouchableOpacity, TextInput } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
 const Register = ({navigation}) => {
+
+  const [Homename, setHomename] = useState('any');
+
   return (
+
     <View style={styles.container}>
 
       <View style = {styles.circle}> 

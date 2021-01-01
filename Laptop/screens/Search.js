@@ -261,12 +261,9 @@ const styles = StyleSheet.create({
       fontFamily: "TimesNewRoman",
       color: "white",
       alignSelf: "baseline",
-<<<<<<< HEAD
       paddingLeft: 55
-    }
-=======
-      paddingLeft: 15
     },
+
     resultBtn:{
       alignSelf:'center',
       justifyContent: 'center',
@@ -288,8 +285,6 @@ const styles = StyleSheet.create({
       color: '#fff5ee'
       //fontWeight: 'bold'
     },
->>>>>>> 4b1d81117ecec70449d47bf8735222e81af3c3a5
-
   });
    
 export default Search;
