@@ -251,8 +251,7 @@ const styles = StyleSheet.create({
       fontSize: 30,
       paddingTop: 30,
       alignSelf: "baseline",
-      paddingLeft: 10,
-      marginTop: 10
+      paddingLeft: 50
     },
 
     askContainer: {
@@ -260,8 +259,9 @@ const styles = StyleSheet.create({
       fontFamily: "TimesNewRoman",
       color: "white",
       alignSelf: "baseline",
-      paddingLeft: 15
+      paddingLeft: 55
     },
+
     resultBtn:{
       alignSelf:'center',
       justifyContent: 'center',
@@ -283,32 +283,6 @@ const styles = StyleSheet.create({
       color: '#fff5ee'
       //fontWeight: 'bold'
     },
-
-    circle: {
-      width: 150,
-      height: 150,
-      borderRadius: 180 / 2,
-      backgroundColor: "#0B0C10",
-      borderColor: '#66FCF1',
-      borderWidth: 1,
-      alignSelf: 'center',
-      marginTop: 150,
-      alignContent: "center",
-      //marginBottom: 50
-      justifyContent: "center",
-    },
-
-    logo: {
-    
-      alignSelf: 'center',
-      //marginRight: 225,
-      height: 90,
-      width: 170,
-      resizeMode: "contain",
-      //flexDirection: 'row'
-  
-    },
-
   });
    
 export default Search;

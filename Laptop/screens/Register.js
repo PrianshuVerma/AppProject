@@ -1,9 +1,13 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { View, Text, StyleSheet, Image, TouchableOpacity, TextInput } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
 const Register = ({navigation}) => {
+
+  const [Homename, setHomename] = useState('any');
+
   return (
+
     <View style={styles.container}>
 
       <View style = {styles.circle}> 
@@ -24,6 +28,7 @@ const Register = ({navigation}) => {
       <View style = {styles.input}> 
           <TextInput
           style = {styles.username}
+          onChangeText = {text => setHomename(text)}
           placeholder = 'Username'
           placeholderTextColor = 'gray'/> 
       </View>
@@ -47,7 +52,7 @@ const Register = ({navigation}) => {
       <View>
 
         <TouchableOpacity 
-            onPress={() => navigation.navigate('Search Page')} 
+            onPress={() => navigation.navigate('Search Page', { paramKey: Homename,})} 
             style={styles.signUpBtn}>
             <Text style={styles.signIntext}>Sign Up</Text>
         </TouchableOpacity>
@@ -224,14 +229,6 @@ const styles = StyleSheet.create({
 
     },
     
-    login: {
-
-      fontFamily: 'Verdana-Bold',
-      color: '#fff5ee',
-      fontSize: 28,
-      marginTop: 50,
-      marginLeft: 50
-    },
     username: {
 
       flex:1, 
