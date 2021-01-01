@@ -33,7 +33,7 @@ const Search = ({route, navigation}) => {
     <View style={styles.container}>
 
   
-        <Text style={styles.greetingContainer}> Hello Prianshu, {route.params.paramKey} </Text>
+        <Text style={styles.greetingContainer}> Hello {route.params.paramKey} </Text>
 
         <Text style={styles.askContainer}> Please select what you would like</Text>
 
