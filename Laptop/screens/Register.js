@@ -48,8 +48,8 @@ const Register = ({navigation}) => {
 
         <TouchableOpacity 
             onPress={() => navigation.navigate('Search Page')} 
-            style={styles.loginBtn}>
-            <Text style={styles.logintext}>Sign Up</Text>
+            style={styles.signUpBtn}>
+            <Text style={styles.signIntext}>Sign Up</Text>
         </TouchableOpacity>
 
       </View>
@@ -100,6 +100,29 @@ const styles = StyleSheet.create({
 
     },
 
+    signUpBtn:{
+      alignSelf:'center',
+      justifyContent: 'center',
+      width: 300,
+      height: 50,
+      borderRadius: 30,
+      marginTop: 25,
+      //marginBottom: 75,     
+      backgroundColor: "#0B0C10",
+      borderColor: "#66FCF1",
+      borderWidth: 1
+      //borderWidth: 1,   
+    },
+    
+    signIntext:{
+      justifyContent: 'center',
+      textAlign: 'center',
+      fontFamily: "Verdana-Bold",
+      fontSize: 20,
+      color: '#fff5ee'
+      //fontWeight: 'bold'
+    },
+
     logInText:{
 
         fontFamily: "Verdana",
@@ -110,7 +133,7 @@ const styles = StyleSheet.create({
     logInView: {
       
       flexDirection: 'row', 
-      marginTop: 100, 
+      marginTop: 50, 
       alignSelf :'center'
     },
 
