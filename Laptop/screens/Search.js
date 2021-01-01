@@ -1,5 +1,5 @@
 import React, {useState, Component} from 'react';
-import { View, Text, StyleSheet, Button, ScrollView, TouchableOpacity } from 'react-native';
+import { View, Text, StyleSheet, Button, ScrollView, TouchableOpacity, Image } from 'react-native';
 import Icon from 'react-native-vector-icons/Feather';
 import {Picker} from '@react-native-picker/picker';
 import DropDownPicker from 'react-native-dropdown-picker';
@@ -31,11 +31,20 @@ const Search = ({route, navigation}) => {
   return (
     
     <View style={styles.container}>
-  
-        <Text style={styles.greetingContainer}> Hello {route.params.paramKey} </Text>
 
-        <Text style={styles.askContainer}> Please select what you would like</Text>
+      <View style={styles.header}>
 
+        <View style={styles.headerwriting}>
+          <Text style={styles.greetingContainer}> Hello {route.params.paramKey} </Text>
+
+          <Text style={styles.askContainer}> Please select what you would like</Text>
+        </View>
+
+        <View style = {styles.circle}> 
+          <Image source={require('./images/logo.png')} style={styles.logo} />
+        </View>
+
+      </View>
       
       <View
             style={{
@@ -196,6 +205,41 @@ const Search = ({route, navigation}) => {
 
  
 const styles = StyleSheet.create({
+
+  header: {
+    flexDirection: 'row',
+  },
+
+    headerwriting: {
+      justifyContent: 'flex-start',
+      alignSelf: 'flex-start'
+    },
+
+    circle: {
+      width: 100,
+      height: 100,
+      borderRadius: 180 / 2,
+      backgroundColor: "#0B0C10",
+      borderColor: '#66FCF1',
+      borderWidth: 1,
+      alignSelf: 'flex-end',
+      marginTop: 20,
+      alignContent: "center",
+      marginLeft: 100,
+      justifyContent: "center",
+    },
+
+    logo: {
+    
+      alignSelf: 'center',
+      //marginRight: 225,
+      height: 60,
+      width: 120,
+      resizeMode: "contain",
+      //flexDirection: 'row'
+  
+    },
+
     container: {
       flex: 1,
       alignItems: 'center',
@@ -260,7 +304,7 @@ const styles = StyleSheet.create({
       fontFamily: "TimesNewRoman",
       color: "white",
       alignSelf: "baseline",
-      paddingLeft: 20
+      paddingLeft: 15
     },
 
     resultBtn:{
