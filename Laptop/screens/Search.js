@@ -31,7 +31,6 @@ const Search = ({route, navigation}) => {
   return (
     
     <View style={styles.container}>
-
   
         <Text style={styles.greetingContainer}> Hello {route.params.paramKey} </Text>
 
@@ -190,7 +189,6 @@ const Search = ({route, navigation}) => {
             <Text style={styles.resultText}>View Results</Text>
           </TouchableOpacity>
          </View>
-
             </ScrollView>
     </View>
   );
@@ -284,6 +282,31 @@ const styles = StyleSheet.create({
       fontSize: 20,
       color: '#fff5ee'
       //fontWeight: 'bold'
+    },
+
+    circle: {
+      width: 150,
+      height: 150,
+      borderRadius: 180 / 2,
+      backgroundColor: "#0B0C10",
+      borderColor: '#66FCF1',
+      borderWidth: 1,
+      alignSelf: 'center',
+      marginTop: 150,
+      alignContent: "center",
+      //marginBottom: 50
+      justifyContent: "center",
+    },
+
+    logo: {
+    
+      alignSelf: 'center',
+      //marginRight: 225,
+      height: 90,
+      width: 170,
+      resizeMode: "contain",
+      //flexDirection: 'row'
+  
     },
 
   });
