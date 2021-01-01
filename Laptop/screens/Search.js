@@ -1,5 +1,5 @@
 import React, {useState, Component} from 'react';
-import { View, Text, StyleSheet, Button, ScrollView} from 'react-native';
+import { View, Text, StyleSheet, Button, ScrollView, TouchableOpacity } from 'react-native';
 import Icon from 'react-native-vector-icons/Feather';
 import {Picker} from '@react-native-picker/picker';
 import DropDownPicker from 'react-native-dropdown-picker';
@@ -40,8 +40,7 @@ const Search = ({route, navigation}) => {
       
       <View
             style={{
-            
-            
+
             flex:1,
             alignItems: 'stretch',
             width: '100%',
@@ -184,12 +183,13 @@ const Search = ({route, navigation}) => {
         onChangeItem={item => setPrice(item.value)}
       />
         </View>
-        
-      <Button   
-                style = {{zIndex: 0}}
-                title="View Result"
-                onPress={() => navigation.navigate('Result Page')}
-            />
+      <View>
+        <TouchableOpacity 
+            onPress={() => navigation.navigate('Result Page')} 
+            style={styles.resultBtn}>
+            <Text style={styles.resultText}>Results</Text>
+          </TouchableOpacity>
+         </View>
             </ScrollView>
     </View>
   );
@@ -262,7 +262,28 @@ const styles = StyleSheet.create({
       color: "white",
       alignSelf: "baseline",
       paddingLeft: 15
-    }
+    },
+    resultBtn:{
+      alignSelf:'center',
+      justifyContent: 'center',
+      width: 300,
+      height: 50,
+      borderRadius: 30,
+      marginTop: 25,
+      //marginBottom: 75,     
+      backgroundColor: "#0B0C10",
+      borderColor: "#66FCF1",
+      borderWidth: 1
+      //borderWidth: 1, 
+    },
+    resultText:{
+      justifyContent: 'center',
+      textAlign: 'center',
+      fontFamily: "Verdana-Bold",
+      fontSize: 20,
+      color: '#fff5ee'
+      //fontWeight: 'bold'
+    },
 
   });
    
