@@ -198,7 +198,6 @@ const Search = ({route, navigation}) => {
             <Text style={styles.resultText}>View Results</Text>
           </TouchableOpacity>
          </View>
-
             </ScrollView>
     </View>
   );
