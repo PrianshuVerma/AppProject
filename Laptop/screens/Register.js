@@ -24,6 +24,7 @@ const Register = ({navigation}) => {
       <View style = {styles.input}> 
           <TextInput
           style = {styles.username}
+          onChangeText = {text => setHomename(text)}
           placeholder = 'Username'
           placeholderTextColor = 'gray'/> 
       </View>
@@ -47,7 +48,7 @@ const Register = ({navigation}) => {
       <View>
 
         <TouchableOpacity 
-            onPress={() => navigation.navigate('Search Page')} 
+            onPress={() => navigation.navigate('Search Page', { paramKey: Homename,})} 
             style={styles.signUpBtn}>
             <Text style={styles.signIntext}>Sign Up</Text>
         </TouchableOpacity>
@@ -224,14 +225,6 @@ const styles = StyleSheet.create({
 
     },
     
-    login: {
-
-      fontFamily: 'Verdana-Bold',
-      color: '#fff5ee',
-      fontSize: 28,
-      marginTop: 50,
-      marginLeft: 50
-    },
     username: {
 
       flex:1, 
