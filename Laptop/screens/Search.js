@@ -26,6 +26,7 @@ const Search = ({route, navigation}) => {
   // used for the sixth picker for the price of the laptop
   const [Price, setPrice] = useState('any');
   
+  
 
 
   return (
