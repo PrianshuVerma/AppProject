@@ -6,63 +6,68 @@ const Register = ({navigation}) => {
   return (
     <View style={styles.container}>
 
-            <View style = {styles.head}> 
-                <Text style ={styles.text}>Sign Up</Text>
-            </View>
+      <View style = {styles.circle}> 
+        <Image source={require('./images/logo.png')} style={styles.logo} />
+      </View>
 
-            <View style = {styles.inputContainer}> 
-                <TextInput
-                style = {styles.username}
-                placeholder = 'Email'
-                placeholderTextColor = 'gray'/> 
-            </View>
+      <View style = {styles.head}> 
+          <Text style ={styles.text}>Sign Up</Text>
+      </View>
 
-            <View style = {styles.input}> 
-                <TextInput
-                style = {styles.username}
-                placeholder = 'Username'
-                placeholderTextColor = 'gray'/> 
-            </View>
+      <View style = {styles.inputContainer}> 
+          <TextInput
+          style = {styles.username}
+          placeholder = 'Email'
+          placeholderTextColor = 'gray'/> 
+      </View>
 
-            <View style = {styles.input}> 
-                <TextInput
-                style = {styles.password}
-                placeholder = 'Password'
-                placeholderTextColor = 'gray'
-                secureTextEntry = {true}/> 
-            </View>
+      <View style = {styles.input}> 
+          <TextInput
+          style = {styles.username}
+          placeholder = 'Username'
+          placeholderTextColor = 'gray'/> 
+      </View>
 
-            <View style = {styles.input}> 
-                <TextInput
-                style = {styles.password}
-                placeholder = 'Confirm Password'
-                placeholderTextColor = 'gray'
-                secureTextEntry = {true}/> 
-            </View>
+      <View style = {styles.input}> 
+          <TextInput
+          style = {styles.password}
+          placeholder = 'Password'
+          placeholderTextColor = 'gray'
+          secureTextEntry = {true}/> 
+      </View>
 
-            <View>
+      <View style = {styles.input}> 
+          <TextInput
+          style = {styles.password}
+          placeholder = 'Confirm Password'
+          placeholderTextColor = 'gray'
+          secureTextEntry = {true}/> 
+      </View>
 
-            <TouchableOpacity 
-                onPress={() => navigation.navigate('Search Page')} 
-                style={styles.loginBtn}>
-                <Text style={styles.logintext}>Sign Up</Text>
-            </TouchableOpacity>
+      <View>
 
-            </View>
+        <TouchableOpacity 
+            onPress={() => navigation.navigate('Search Page')} 
+            style={styles.loginBtn}>
+            <Text style={styles.logintext}>Sign Up</Text>
+        </TouchableOpacity>
 
-            <View style ={styles.signUpView}>
-              <Text style={styles.signUpText}>
-                Already have an account?
-              </Text>
+      </View>
 
-              <TouchableOpacity 
-                onPress={() => navigation.navigate('Home Page')} 
-                >
-                <Text style = {styles.signUp}> Login here </Text>
-              </TouchableOpacity>
+      <View style ={styles.logInView}>
+
+        <Text style={styles.logInText}>
+          Already have an account?
+        </Text>
+
+        <TouchableOpacity 
+          onPress={() => navigation.navigate('Home Page')} 
+          >
+          <Text style = {styles.logIn}> Login here </Text>
+        </TouchableOpacity>
 
 
-            </View>
+      </View>
 
     </View>
   );
@@ -70,26 +75,51 @@ const Register = ({navigation}) => {
 
 const styles = StyleSheet.create({
 
-    signUpText:{
+    circle: {
+      width: 130,
+      height: 130,
+      borderRadius: 180 / 2,
+      backgroundColor: "#0B0C10",
+      borderColor: '#66FCF1',
+      borderWidth: 1,
+      alignSelf: 'center',
+      marginTop: 50,
+      alignContent: "center",
+      //marginBottom: 50
+      justifyContent: "center",
+      },
+
+    logo: {
+    
+      alignSelf: 'center',
+      //marginRight: 225,
+      height: 80,
+      width: 150,
+      resizeMode: "contain",
+      //flexDirection: 'row'
+
+    },
+
+    logInText:{
 
         fontFamily: "Verdana",
         fontSize: 15,
         color: 'gray',
       },
   
-      signUpView: {
-  
-        flexDirection: 'row', 
-        marginTop: 275, 
-        alignSelf :'center'
-      },
-  
-      signUp: {
-  
-        fontFamily: "Verdana",
-        fontSize: 15,
-        color: '#66FCF1',
-      },
+    logInView: {
+      
+      flexDirection: 'row', 
+      marginTop: 100, 
+      alignSelf :'center'
+    },
+
+    logIn: {
+
+      fontFamily: "Verdana",
+      fontSize: 15,
+      color: '#66FCF1',
+    },
 
     container: {
       flex: 1,
@@ -117,27 +147,12 @@ const styles = StyleSheet.create({
         justifyContent: "center"
     },
 
-    logo: {
-      alignSelf: 'center',
-      marginRight: 225,
-      height: 100,
-      width: 190,
-      marginTop: 100,
-      resizeMode: "contain"
-    },
-
     text:{
         textAlign: 'left',
         fontFamily: "Verdana-Bold",
         fontSize: 40,
-        color: "#66FCF1"
-    },
-
-    registertext:{
-      alignSelf: "center",
-      fontFamily: "Verdana-Bold",
-      fontSize: 20,
-      color: '#ffffff'
+        color: "#66FCF1",
+        alignSelf: 'flex-start'
     },
 
     signintext:{
@@ -146,69 +161,10 @@ const styles = StyleSheet.create({
       fontSize: 20,
       color: '#000000'
     },
-    
-    searchtext:{
-      justifyContent: 'center',
-      textAlign: 'center',
-      fontFamily: "Verdana-Bold",
-      fontSize: 20,
-      color: '#fff5ee'
-      //fontWeight: 'bold'
-    },
-    
-    search:{
-      alignSelf:'center',
-      justifyContent: 'center',
-      width: 300,
-      height: 50,
-      marginTop: 50,     
-      backgroundColor: "#0B0C10",
-      borderColor: "#66FCF1",
-      borderWidth: 1,   
-      marginBottom: 20,
-    },
+ 
 
-    loginBtn:{
-      alignSelf:'center',
-      justifyContent: 'center',
-      width: 300,
-      height: 50,
-      borderRadius: 30,
-      marginTop: 25,
-      //marginBottom: 75,     
-      backgroundColor: "#0B0C10",
-      borderColor: "#66FCF1",
-      borderWidth: 1
-      //borderWidth: 1,   
-    },
-    logintext:{
-      justifyContent: 'center',
-      textAlign: 'center',
-      fontFamily: "Verdana-Bold",
-      fontSize: 20,
-      color: '#fff5ee'
-      //fontWeight: 'bold'
-    },
-    register:{
-      justifyContent: 'center',
-      borderRadius:10,
-      width: 120,
-      height:50,
-      alignSelf: 'flex-end',
-      marginLeft: 60,     
-      backgroundColor: "#696969",      
-    },
-
-    signin:{
-      justifyContent: 'center',
-      borderRadius:10,
-      width: 120,
-      height:50,
-      alignSelf: 'flex-start',
-      backgroundColor: "#ffffff",
-    },
     inputContainer: {
-      flex: 1,
+      flex: 3,
       maxHeight: 45,
       width: 350,
       borderRadius: 10,
@@ -218,12 +174,16 @@ const styles = StyleSheet.create({
       paddingHorizontal: 20,
       color: 'white',
       marginTop: 25,
+      paddingTop: 15,
+      paddingBottom: 10,
+      marginBottom: 25,
       //marginLeft: 35,
       alignSelf: 'center',
-      fontFamily: 'Verdana-Italic',
+      fontFamily: 'Verdana',
     },
+
     input: {
-      flex: 1,
+      flex: 3,
       maxHeight: 45,
       width: 350,
       borderRadius: 10,
@@ -232,10 +192,15 @@ const styles = StyleSheet.create({
       alignItems: 'center',
       paddingHorizontal: 20,
       color: 'white',
-      marginTop: 15,
+      marginBottom: 20,
+      paddingTop: 15,
+      paddingBottom: 10,
+      //marginLeft: 35,
       alignSelf: 'center',
-      fontFamily: 'Verdana-Bold',
+      fontFamily: 'Verdana',
+
     },
+    
     login: {
 
       fontFamily: 'Verdana-Bold',
