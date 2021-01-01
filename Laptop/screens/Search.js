@@ -251,7 +251,8 @@ const styles = StyleSheet.create({
       fontSize: 30,
       paddingTop: 30,
       alignSelf: "baseline",
-      paddingLeft: 50
+      paddingLeft: 15,
+      marginTop: 10
     },
 
     askContainer: {
@@ -259,7 +260,7 @@ const styles = StyleSheet.create({
       fontFamily: "TimesNewRoman",
       color: "white",
       alignSelf: "baseline",
-      paddingLeft: 55
+      paddingLeft: 20
     },
 
     resultBtn:{
