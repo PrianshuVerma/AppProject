@@ -6,8 +6,6 @@ import DropDownPicker from 'react-native-dropdown-picker';
 
 const Search = ({route, navigation}) => {
 
-  //const item = props.navigation.getParam('data')
-
   // used for the first picker for the brand of the laptop
   const [Brand, setBrand] = useState('any');
 
