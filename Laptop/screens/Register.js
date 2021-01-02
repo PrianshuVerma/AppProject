@@ -81,14 +81,14 @@ const Register = ({navigation}) => {
 const styles = StyleSheet.create({
 
     circle: {
-      width: 130,
-      height: 130,
+      width: 180,
+      height: 180,
       borderRadius: 180 / 2,
       backgroundColor: "#0B0C10",
       borderColor: '#66FCF1',
       borderWidth: 1,
       alignSelf: 'center',
-      marginTop: 50,
+      marginTop: 100,
       alignContent: "center",
       //marginBottom: 50
       justifyContent: "center"

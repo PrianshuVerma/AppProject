@@ -71,8 +71,8 @@ const Home = ({navigation}) => {
 const styles = StyleSheet.create({
 
   circle: {
-    width: 150,
-    height: 150,
+    width: 180,
+    height: 180,
     borderRadius: 180 / 2,
     backgroundColor: "#0B0C10",
     borderColor: '#66FCF1',
@@ -95,8 +95,8 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignSelf: 'center',
     //marginRight: 225,
-    height: 140,
-    width: 220,
+    height: 100,
+    width: 190,
     resizeMode: "contain"
     //flexDirection: 'row'
 
