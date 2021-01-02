@@ -233,7 +233,7 @@ const styles = StyleSheet.create({
     },
 
     logo: {
-    
+      justifyContent: 'center',
       alignSelf: 'center',
       height: 60,
       width: 120,
