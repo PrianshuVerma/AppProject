@@ -81,7 +81,7 @@ const styles = StyleSheet.create({
     marginTop: 150,
     alignContent: "center",
     //marginBottom: 50
-    justifyContent: "center",
+    justifyContent: "center"
   },
 
   container: {
@@ -92,12 +92,12 @@ const styles = StyleSheet.create({
   },
 
   logo: {
-    
+    justifyContent: "center",
     alignSelf: 'center',
     //marginRight: 225,
-    height: 90,
-    width: 170,
-    resizeMode: "contain",
+    height: 140,
+    width: 220,
+    resizeMode: "contain"
     //flexDirection: 'row'
 
   },

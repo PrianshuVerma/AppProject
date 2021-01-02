@@ -91,18 +91,17 @@ const styles = StyleSheet.create({
       marginTop: 50,
       alignContent: "center",
       //marginBottom: 50
-      justifyContent: "center",
+      justifyContent: "center"
       },
 
     logo: {
     
       alignSelf: 'center',
       //marginRight: 225,
-      height: 80,
-      width: 150,
-      resizeMode: "contain",
+      height: 100,
+      width: 180,
+      resizeMode: "contain"
       //flexDirection: 'row'
-
     },
 
     signUpBtn:{
