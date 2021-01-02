@@ -303,7 +303,7 @@ const styles = StyleSheet.create({
       fontSize: 30,
       paddingTop: 30,
       alignSelf: "baseline",
-      paddingLeft: '1%',
+      //paddingLeft: '1%',
       marginTop: 10
     },
 
@@ -312,7 +312,7 @@ const styles = StyleSheet.create({
       //fontFamily: "TimesNewRoman",
       color: "white",
       alignSelf: "baseline",
-      paddingLeft: '1%'
+      //paddingLeft: '1%'
     },
 
     resultBtn:{
