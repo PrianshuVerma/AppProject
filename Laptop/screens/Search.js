@@ -4,7 +4,15 @@ import Icon from 'react-native-vector-icons/Feather';
 import {Picker} from '@react-native-picker/picker';
 import DropDownPicker from 'react-native-dropdown-picker';
 
+
+const nav = () => {
+
+}
+
+
 const Search = ({route, navigation}) => {
+
+  //fsdfds
 
   // used for the first picker for the brand of the laptop
   const [Brand, setBrand] = useState('any');
@@ -24,8 +32,10 @@ const Search = ({route, navigation}) => {
   // used for the sixth picker for the price of the laptop
   const [Price, setPrice] = useState('any');
 
+  
+
   return (
-    
+
     <SafeAreaView style={styles.container}>
 
       <View style={styles.header}>
