@@ -1,5 +1,5 @@
 import React, {useState, Component} from 'react';
-import { View, Text, StyleSheet, Button, ScrollView, TouchableOpacity, Image } from 'react-native';
+import { View, Text, StyleSheet, Button, ScrollView, TouchableOpacity, Image, SafeAreaView } from 'react-native';
 import Icon from 'react-native-vector-icons/Feather';
 import {Picker} from '@react-native-picker/picker';
 import DropDownPicker from 'react-native-dropdown-picker';
@@ -26,19 +26,19 @@ const Search = ({route, navigation}) => {
   // used for the sixth picker for the price of the laptop
   const [Price, setPrice] = useState('any');
   
-  
+
 
 
   return (
     
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
 
       <View style={styles.header}>
 
         <View style={styles.headerwriting}>
-          <Text style={styles.greetingContainer}> Hello {route.params.paramKey} </Text>
+          <Text style={styles.greetingContainer}>Hello {route.params.paramKey} </Text>
 
-          <Text style={styles.askContainer}> Please select what you would like</Text>
+          <Text numberOfLines= {1} style={styles.askContainer}>Please select what you'd like</Text>
         </View>
 
         <View style = {styles.circle}> 
@@ -199,8 +199,15 @@ const Search = ({route, navigation}) => {
             <Text style={styles.resultText}>View Results</Text>
           </TouchableOpacity>
          </View>
+
+         <View
+            style={{
+
+            paddingTop: 30
+            }}
+          />
             </ScrollView>
-    </View>
+    </SafeAreaView>
   );
 };
 
@@ -224,9 +231,9 @@ const styles = StyleSheet.create({
       borderColor: '#66FCF1',
       borderWidth: 1,
       alignSelf: 'flex-end',
-      marginTop: 20,
+      marginTop: 15,
       alignContent: "center",
-      marginLeft: 100,
+      marginLeft: 30,
       justifyContent: "center",
     },
 
@@ -290,22 +297,22 @@ const styles = StyleSheet.create({
 
 
     greetingContainer: {
-      fontFamily: "TimesNewRoman",
+     // fontFamily: "TimesNewRoman",
       fontWeight: "bold",
       color: "white",
       fontSize: 30,
       paddingTop: 30,
       alignSelf: "baseline",
-      paddingLeft: 15,
+      paddingLeft: '1%',
       marginTop: 10
     },
 
     askContainer: {
-      paddingTop: 10,
-      fontFamily: "TimesNewRoman",
+      paddingTop: 7,
+      //fontFamily: "TimesNewRoman",
       color: "white",
       alignSelf: "baseline",
-      paddingLeft: 15
+      paddingLeft: '1%'
     },
 
     resultBtn:{
@@ -318,7 +325,7 @@ const styles = StyleSheet.create({
       //marginBottom: 75,     
       backgroundColor: "#0B0C10",
       borderColor: "#66FCF1",
-      borderWidth: 1
+      borderWidth: 1,
       //borderWidth: 1, 
     },
     resultText:{
