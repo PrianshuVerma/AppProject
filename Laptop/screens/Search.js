@@ -6,8 +6,6 @@ import DropDownPicker from 'react-native-dropdown-picker';
 
 const Search = ({route, navigation}) => {
 
-  //const item = props.navigation.getParam('data')
-
   // used for the first picker for the brand of the laptop
   const [Brand, setBrand] = useState('any');
 
@@ -25,9 +23,6 @@ const Search = ({route, navigation}) => {
 
   // used for the sixth picker for the price of the laptop
   const [Price, setPrice] = useState('any');
-  
-
-
 
   return (
     
@@ -240,12 +235,9 @@ const styles = StyleSheet.create({
     logo: {
     
       alignSelf: 'center',
-      //marginRight: 225,
       height: 60,
       width: 120,
       resizeMode: "contain",
-      //flexDirection: 'row'
-  
     },
 
     container: {
@@ -297,22 +289,18 @@ const styles = StyleSheet.create({
 
 
     greetingContainer: {
-     // fontFamily: "TimesNewRoman",
       fontWeight: "bold",
       color: "white",
       fontSize: 30,
       paddingTop: 30,
       alignSelf: "baseline",
-      paddingLeft: '1%',
       marginTop: 10
     },
 
     askContainer: {
       paddingTop: 7,
-      //fontFamily: "TimesNewRoman",
       color: "white",
       alignSelf: "baseline",
-      paddingLeft: '1%'
     },
 
     resultBtn:{
@@ -322,11 +310,9 @@ const styles = StyleSheet.create({
       height: 50,
       borderRadius: 30,
       marginTop: 25,
-      //marginBottom: 75,     
       backgroundColor: "#0B0C10",
       borderColor: "#66FCF1",
       borderWidth: 1,
-      //borderWidth: 1, 
     },
     resultText:{
       justifyContent: 'center',
@@ -334,7 +320,6 @@ const styles = StyleSheet.create({
       fontFamily: "Verdana-Bold",
       fontSize: 20,
       color: '#fff5ee'
-      //fontWeight: 'bold'
     },
   });
    
