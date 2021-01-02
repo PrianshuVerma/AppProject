@@ -3,10 +3,15 @@ import { View, Text, StyleSheet, Button, ScrollView, TouchableOpacity, Image, Sa
 import Icon from 'react-native-vector-icons/Feather';
 import {Picker} from '@react-native-picker/picker';
 import DropDownPicker from 'react-native-dropdown-picker';
+import AnimatedProgressWheel from 'react-native-progress-wheel';
 
+const nav = (props) => {
+  setTimeout(()=>{
+    
 
-const nav = () => {
-
+    props.navigate('Result Page')
+  }, 3000);
+  
 }
 
 
@@ -31,8 +36,6 @@ const Search = ({route, navigation}) => {
 
   // used for the sixth picker for the price of the laptop
   const [Price, setPrice] = useState('any');
-
-  
 
   return (
 
@@ -199,7 +202,7 @@ const Search = ({route, navigation}) => {
         </View>
       <View>
         <TouchableOpacity 
-            onPress={() => navigation.navigate('Result Page')} 
+            onPress={() => nav(navigation) } 
             style={styles.resultBtn}>
             <Text style={styles.resultText}>View Results</Text>
           </TouchableOpacity>
