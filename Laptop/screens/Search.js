@@ -232,24 +232,24 @@ const styles = StyleSheet.create({
     },
 
     circle: {
-      width: 70,
-      height: 70,
+      width: 80,
+      height: 80,
       borderRadius: 180 / 2,
       backgroundColor: "#0B0C10",
       borderColor: '#66FCF1',
       borderWidth: 1,
       alignSelf: 'flex-end',
-      marginTop: 15,
+      marginTop: 10,
       alignContent: "center",
-      marginLeft: 30,
+      marginLeft: 115,
       justifyContent: "center",
     },
 
     logo: {
       justifyContent: 'center',
       alignSelf: 'center',
-      height: 60,
-      width: 120,
+      height: 70,
+      width: 70,
       resizeMode: "contain",
     },
 
