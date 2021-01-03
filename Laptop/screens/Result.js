@@ -1,13 +1,25 @@
 import React ,{useState} from 'react';
-import { View, Text, StyleSheet} from 'react-native';
+import { View, Text, StyleSheet, Button} from 'react-native';
 import AnimatedProgressWheel from 'react-native-progress-wheel';
 import {db} from './config'
 
+const addItem = (item) => {
+  db.ref('/Users').push({
+    FName: item
+  });
+}
 
 const Result = () => {
   return (
     <View style={styles.container}>
       <Text>This is the Result Page</Text>
+
+      <Button 
+            onPress={addItem('pdog')} 
+            style={styles.resultBtn}>
+            <Text> View Results</Text>
+            
+      </Button>
 
       <AnimatedProgressWheel 
     size={120} 
