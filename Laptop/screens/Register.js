@@ -2,7 +2,14 @@ import React, {useState} from 'react';
 import { View, Text, StyleSheet, Image, TouchableOpacity, TextInput, Alert } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import {db} from './config'
+import * as firebase from 'firebase/app'
+import 'firebase/auth'
 
+const showAlert = () =>{
+  Alert.alert(
+     'You need to...'
+  )
+}
 
 const addItem = (props, email, username, pass) => {
 
@@ -23,39 +30,18 @@ const addItem = (props, email, username, pass) => {
 
   else{
     if (email == '') {
-      Alert.alert(
-        "Invalid Email",
-        "Please Enter a Valid Email!",
-        [
-          { text: "OK", onPress: () => console.log("OK Pressed") }
-        ],
-        { cancelable: false }
-      );
+      alert ('Please enter Valid Email')
       // alert for the email
     }
 
     else if (username == '') {
       // alert for username
-      Alert.alert(
-        "Invalid Email",
-        "Please Enter a Valid Email!",
-        [
-          { text: "OK", onPress: () => console.log("OK Pressed") }
-        ],
-        { cancelable: false }
-      );
+      alert ('Please enter Valid Username')
     }
 
     else {
       // alert for the password being empty
-      Alert.alert(
-        "Invalid Email",
-        "Please Enter a Valid Email!",
-        [
-          { text: "OK", onPress: () => console.log("OK Pressed") }
-        ],
-        { cancelable: false }
-      );
+      alert ('Please enter Valid Password')
     }
   }
   
