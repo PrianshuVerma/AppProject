@@ -5,7 +5,7 @@ import {Picker} from '@react-native-picker/picker';
 import DropDownPicker from 'react-native-dropdown-picker';
 import AnimatedProgressWheel from 'react-native-progress-wheel';
 import {db} from './config'
-import {dataArray} from './data'
+import {dataArray} from './ComputerDataBase'
 
 
 const fetch_data = () => {
