@@ -1,18 +1,38 @@
 import React, {useState} from 'react';
-import { View, Text, StyleSheet, Image, TouchableOpacity, TextInput } from 'react-native';
+import { View, Text, StyleSheet, Image, TouchableOpacity, TextInput, Alert } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import {db} from './config'
 
 const addItem = (props, email, username, pass) => {
-  // over here make sure the values are not null
-  db.ref('/Users').push({
+
+// also add in something to make sure theire account does not exist, time permitting
+
+  if (email != '' && username != ''&& pass != '') {
+
+    db.ref('/Users').push({
     
       Email: email,
       UserName: username,
       Password: pass
-  });
+    });
 
-  props.navigate('Search Page', { paramKey: username,})
+    props.navigate('Search Page', { paramKey: username,})
+  }
+
+  else{
+    if (email == '') {
+      // alert for the email
+    }
+
+    else if (username == '') {
+      // alert for username
+    }
+
+    else {
+      // alert for the password being empty
+    }
+  }
+  
 }
 
 
