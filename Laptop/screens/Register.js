@@ -1,10 +1,30 @@
 import React, {useState} from 'react';
 import { View, Text, StyleSheet, Image, TouchableOpacity, TextInput } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
+import {db} from './config'
+
+const addItem = (props, email, username, pass) => {
+  // over here make sure the values are not null
+  db.ref('/Users').push({
+    
+      Email: email,
+      UserName: username,
+      Password: pass
+  });
+
+  props.navigate('Search Page', { paramKey: username,})
+}
+
 
 const Register = ({navigation}) => {
 
-  const [Homename, setHomename] = useState('any');
+  const [email, setemail] = useState('');
+
+  const [username, setusername] = useState('');
+
+  const [pass1, setpass1] = useState('');
+
+  const [pass2, setpass2] = useState('');
 
   return (
 
@@ -22,13 +42,14 @@ const Register = ({navigation}) => {
           <TextInput
           style = {styles.username}
           placeholder = 'Email'
+          onChangeText = {text => setemail(text)}
           placeholderTextColor = 'gray'/> 
       </View>
 
       <View style = {styles.input}> 
           <TextInput
           style = {styles.username}
-          onChangeText = {text => setHomename(text)}
+          onChangeText = {text => setusername(text)}
           placeholder = 'Username'
           placeholderTextColor = 'gray'/> 
       </View>
@@ -37,6 +58,7 @@ const Register = ({navigation}) => {
           <TextInput
           style = {styles.password}
           placeholder = 'Password'
+          onChangeText = {text => setpass1(text)}
           placeholderTextColor = 'gray'
           secureTextEntry = {true}/> 
       </View>
@@ -45,6 +67,8 @@ const Register = ({navigation}) => {
           <TextInput
           style = {styles.password}
           placeholder = 'Confirm Password'
+          // over here add a function to make sure that the passwords are the same
+          onChangeText = {text => setpass2(text)}
           placeholderTextColor = 'gray'
           secureTextEntry = {true}/> 
       </View>
@@ -52,7 +76,7 @@ const Register = ({navigation}) => {
       <View>
 
         <TouchableOpacity 
-            onPress={() => navigation.navigate('Search Page', { paramKey: Homename,})} 
+            onPress={ () => addItem(navigation, email, username, pass1)} 
             style={styles.signUpBtn}>
             <Text style={styles.signIntext}>Sign Up</Text>
         </TouchableOpacity>

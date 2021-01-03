@@ -5,9 +5,13 @@ import {db} from './config'
 
 const addItem = (item) => {
   db.ref('/Users').push({
-    FName: item
+    item: {
+      FName: item,
+    }
+    
   });
 }
+
 
 const Result = () => {
   return (
@@ -15,7 +19,7 @@ const Result = () => {
       <Text>This is the Result Page</Text>
 
       <Button 
-            onPress={addItem('pdog')} 
+            onPress={addItem('p')} 
             style={styles.resultBtn}>
             <Text> View Results</Text>
             
