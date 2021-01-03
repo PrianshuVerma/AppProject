@@ -4,15 +4,34 @@ import Icon from 'react-native-vector-icons/Feather';
 import {Picker} from '@react-native-picker/picker';
 import DropDownPicker from 'react-native-dropdown-picker';
 import AnimatedProgressWheel from 'react-native-progress-wheel';
+import {db} from './config'
+import {dataArray} from './data'
+
+
+const fetch_data = () => {
+
+  var len = dataArray.length;
+
+  for (var i = 0; i < len; i++ ) {
+
+    alert(JSON.stringify(dataArray[i]))
+    
+    alert(JSON.stringify((dataArray[i]).Name))
+  }
+}
 
 const nav = (props) => {
+
+  fetch_data();
+
 {/* } setTimeout(()=>{
     
 
     props.navigate('Result Page')
   }, 3000);
 */}
-props.navigate('Result Page')
+//props.navigate('Result Page')
+//alert(JSON.stringify(dataarr))
 }
 
 
@@ -203,7 +222,7 @@ const Search = ({route, navigation}) => {
         </View>
       <View>
         <TouchableOpacity 
-            onPress={() => navigation.navigate('Result Page')} 
+            onPress={() => nav(navigation)} 
             style={styles.resultBtn}>
             <Text style={styles.resultText}>View Results</Text>
           </TouchableOpacity>

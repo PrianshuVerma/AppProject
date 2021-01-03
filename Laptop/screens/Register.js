@@ -5,11 +5,6 @@ import {db} from './config'
 import * as firebase from 'firebase/app'
 import 'firebase/auth'
 
-const showAlert = () =>{
-  Alert.alert(
-     'You need to...'
-  )
-}
 
 const addItem = (props, email, username, pass) => {
 
