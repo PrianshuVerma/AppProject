@@ -6,12 +6,13 @@ import DropDownPicker from 'react-native-dropdown-picker';
 import AnimatedProgressWheel from 'react-native-progress-wheel';
 
 const nav = (props) => {
-  setTimeout(()=>{
+{/* } setTimeout(()=>{
     
 
     props.navigate('Result Page')
   }, 3000);
-  
+*/}
+props.navigate('Result Page')
 }
 
 
@@ -202,7 +203,7 @@ const Search = ({route, navigation}) => {
         </View>
       <View>
         <TouchableOpacity 
-            onPress={() => nav(navigation) } 
+            onPress={() => navigation.navigate('Result Page')} 
             style={styles.resultBtn}>
             <Text style={styles.resultText}>View Results</Text>
           </TouchableOpacity>

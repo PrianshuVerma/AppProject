@@ -1,7 +1,8 @@
-import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import React ,{useState} from 'react';
+import { View, Text, StyleSheet} from 'react-native';
 import AnimatedProgressWheel from 'react-native-progress-wheel';
- 
+import {db} from './config'
+
 
 const Result = () => {
   return (
