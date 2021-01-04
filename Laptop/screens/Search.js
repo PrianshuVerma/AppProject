@@ -48,22 +48,16 @@ function removeOtherRam(Ram, data) {
 
   }
 
-  return temp;
-
-}
-
-
-const fetch_data = () => {
-
-  var len = dataArray.length;
-
-  for (var i = 0; i < len; i++ ) {
-
-    alert(JSON.stringify(dataArray[i]))
-    
-    alert(JSON.stringify((dataArray[i]).Name))
+  if (temp.length == 0) {
+    return data;
   }
+
+  else {
+    return temp;
+  }
+
 }
+
 
 function removeOtherProcessor(Processor, data) {
 
@@ -83,7 +77,13 @@ function removeOtherProcessor(Processor, data) {
 
   }
 
-  return temp;
+  if (temp.length == 0) {
+    return data;
+  }
+
+  else {
+    return temp;
+  }
 
 }
 
@@ -105,7 +105,13 @@ function removeOtherHardrive(Hardrive, data) {
 
   }
 
-  return temp;
+  if (temp.length == 0) {
+    return data;
+  }
+
+  else {
+    return temp;
+  }
 
 }
 
@@ -127,7 +133,13 @@ function removeOtherStorage(Storage, data) {
 
   }
 
-  return temp;
+  if (temp.length == 0) {
+    return data;
+  }
+
+  else {
+    return temp;
+  }
 
 }
 
@@ -149,7 +161,13 @@ function removeOtherPrice(Price, data) {
 
   }
 
-  return temp;
+  if (temp.length == 0) {
+    return data;
+  }
+
+  else {
+    return temp;
+  }
 
 }
 
@@ -169,6 +187,8 @@ const nav = (props, Brand, Ram, Processor, Hardrive, Storage, Price) => {
   final_arry = removeOtherPrice(Price, final_arry);
 
   alert(JSON.stringify(final_arry));
+
+
 
   //fetch_data();
 
