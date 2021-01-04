@@ -4,10 +4,14 @@ import Icon from 'react-native-vector-icons/MaterialIcons';
 import {db} from './config'
 import * as firebase from 'firebase/app'
 import 'firebase/auth'
+import * as EmailValidator from 'email-validator';
 
 
 const addItem = (props, email, username, pass) => {
 
+  if (! EmailValidator.validate(email)){
+    alert('This is not a valid Email');
+  }
 
 // also add in something to make sure their account does not exist, time permitting
 
@@ -41,7 +45,6 @@ const addItem = (props, email, username, pass) => {
   }
   
 }
-
 
 const Register = ({navigation}) => {
 

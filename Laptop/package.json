@@ -13,6 +13,8 @@
     "@react-native-picker/picker": "^1.9.8",
     "@react-navigation/native": "^5.8.10",
     "@react-navigation/stack": "^5.12.8",
+    "email-deep-validator": "^3.3.0",
+    "email-validator": "^2.0.4",
     "expo": "^40.0.0",
     "expo-status-bar": "~1.0.3",
     "firebase": "^8.2.1",

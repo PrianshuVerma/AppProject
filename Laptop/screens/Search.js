@@ -186,20 +186,16 @@ const nav = (props, Brand, Ram, Processor, Hardrive, Storage, Price) => {
 
   final_arry = removeOtherPrice(Price, final_arry);
 
+  // change this to sort by popularity first before we 
+  // truncate the rest off
+  if (final_arry.length >= 3) {
+    final_arry.length = 3;
+  }
+
   alert(JSON.stringify(final_arry));
 
+  props.navigate('Result Page');
 
-
-  //fetch_data();
-
-{/* } setTimeout(()=>{
-    
-
-    props.navigate('Result Page')
-  }, 3000);
-*/}
-//props.navigate('Result Page')
-//alert(JSON.stringify(dataarr))
 }
 
 
