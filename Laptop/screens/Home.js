@@ -41,7 +41,7 @@ const Home = ({navigation}) => {
 
         <View>
 
-          <TouchableOpacity 
+          <TouchableOpacity
               onPress={() => navigation.navigate('Search Page', { paramKey: Homename,})} 
               style={styles.loginBtn}>
               <Text style={styles.logintext}>Login</Text>

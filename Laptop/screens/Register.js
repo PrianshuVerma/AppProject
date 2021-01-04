@@ -4,43 +4,83 @@ import Icon from 'react-native-vector-icons/MaterialIcons';
 import {db} from './config'
 import * as firebase from 'firebase/app'
 import 'firebase/auth'
+import {dataArray} from './EmailDataBase'
 
 
 const addItem = (props, email, username, pass) => {
 
-
-// also add in something to make sure their account does not exist, time permitting
+//also add in something to make sure their account does not exist, time permitting
 
   if (email != '' && username != ''&& pass != '') {
 
-    db.ref('/Users').push({
-    
-      Email: email,
-      UserName: username,
-      Password: pass
-    });
+    if (emailExists(email, dataArray)){
 
-    props.navigate('Search Page', { paramKey: username,})
+      alert('This Email is already Associated with an Username')
+
+    }
+    else if (usernameExists(username, dataArray)){
+
+      alert('This Username isn\'t available :(')
+
+    }
+    else if (!emailExists(email, dataArray) && (!usernameExists(username, dataArray))){
+      db.ref('/Users').push({
+    
+        Email: email,
+        UserName: username,
+        Password: pass
+      });
+
+      props.navigate('Search Page', { paramKey: username,})
+    }
   }
 
   else{
     if (email == '') {
       alert ('Please enter Valid Email')
-      // alert for the email
-    }
+        // alert for the email
+      }
 
     else if (username == '') {
       // alert for username
       alert ('Please enter Valid Username')
-    }
+      }
 
     else {
       // alert for the password being empty
       alert ('Please enter Valid Password')
+      }
     }
   }
-  
-}
+
+  function usernameExists(username, data) {
+
+    var len = data.length;
+    //var s = false;;
+
+    for (var i = 0; i < len; i++){
+
+      if ((data[i].UserName) == username){
+        return true
+      }
+    }
+    return false
+  }
+
+  function emailExists(email, data) {
+
+    var len = data.length;
+    //var s = false;;
+
+    for (var i = 0; i < len; i++){
+
+      if ((data[i].Email) == email){
+        return true
+      }
+    }
+
+    return false
+  }
 
 
 const Register = ({navigation}) => {
@@ -54,6 +94,8 @@ const Register = ({navigation}) => {
   const [pass2, setpass2] = useState('');
 
   return (
+
+
 
     <View style={styles.container}>
 
@@ -117,7 +159,8 @@ const Register = ({navigation}) => {
         </Text>
 
         <TouchableOpacity 
-          onPress={() => navigation.navigate('Home Page')} 
+          //onPress={() => navigation.navigate('Home Page')} 
+          onPress={() => alert(JSON.stringify(dataArray))}
           >
           <Text style = {styles.logIn}> Login here </Text>
         </TouchableOpacity>
@@ -300,5 +343,4 @@ const styles = StyleSheet.create({
 
     },
   });
-
   export default Register;
