@@ -9,7 +9,6 @@ import {db} from './config'
         snapshot.forEach(function(snap) {
             var item
             item = snap.val()
-            //alert(JSON.stringify(snap));
             temparr.push(item)
         
           });

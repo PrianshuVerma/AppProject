@@ -8,6 +8,21 @@ import {db} from './config'
 import {dataArray} from './ComputerDataBase'
 
 
+function removeOtherBrands(Brand, data) {
+
+  var temp = [];
+
+  var len = data.len;
+
+  
+
+
+
+
+
+}
+
+
 const fetch_data = () => {
 
   var len = dataArray.length;
@@ -20,7 +35,9 @@ const fetch_data = () => {
   }
 }
 
-const nav = (props) => {
+const nav = (props, Brand) => {
+
+  var final_arry = removeOtherBrands(Brand, dataArray);
 
   fetch_data();
 
@@ -222,7 +239,7 @@ const Search = ({route, navigation}) => {
         </View>
       <View>
         <TouchableOpacity 
-            onPress={() => nav(navigation)} 
+            onPress={() => nav(navigation, Brand)} 
             style={styles.resultBtn}>
             <Text style={styles.resultText}>View Results</Text>
           </TouchableOpacity>
