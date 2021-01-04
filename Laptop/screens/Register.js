@@ -5,11 +5,16 @@ import {db} from './config'
 import * as firebase from 'firebase/app'
 import 'firebase/auth'
 import {dataArray} from './EmailDataBase'
+import * as EmailValidator from 'email-validator';
 
 
 const addItem = (props, email, username, pass) => {
 
-//also add in something to make sure their account does not exist, time permitting
+  if (! EmailValidator.validate(email)){
+    alert('This is not a valid Email');
+  }
+
+// also add in something to make sure their account does not exist, time permitting
 
   if (email != '' && username != ''&& pass != '') {
 
@@ -81,7 +86,6 @@ const addItem = (props, email, username, pass) => {
 
     return false
   }
-
 
 const Register = ({navigation}) => {
 

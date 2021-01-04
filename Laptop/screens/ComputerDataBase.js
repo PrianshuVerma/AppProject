@@ -7,8 +7,9 @@ import {db} from './config'
         var temparr = [];
     
         snapshot.forEach(function(snap) {
-            var item
-            item = snap.val()
+            var item;
+            item  = snap.val()
+            item.key = snap.key
             temparr.push(item)
         
           });
