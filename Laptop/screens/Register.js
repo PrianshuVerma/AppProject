@@ -3,44 +3,50 @@ import { View, Text, StyleSheet, Image, TouchableOpacity, TextInput, Alert } fro
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import {db} from './config'
 import * as firebase from 'firebase/app'
-import 'firebase/auth'
+import auth from '@react-native-firebase/auth';
+
+// const showAlert = () =>{
+//   Alert.alert(
+//      'You need to...'
+//   )
+// }
+
+// const addItem = (props, email, username, pass) => {
 
 
-const addItem = (props, email, username, pass) => {
+// // also add in something to make sure their account does not exist, time permitting
 
+//   if (email != '' && username != ''&& pass != '') {
 
-// also add in something to make sure their account does not exist, time permitting
-
-  if (email != '' && username != ''&& pass != '') {
-
-    db.ref('/Users').push({
+//     db.ref('/Users').push({
     
-      Email: email,
-      UserName: username,
-      Password: pass
-    });
+//       Email: email,
+//       UserName: username,
+//       Password: pass
+//     });
 
-    props.navigate('Search Page', { paramKey: username,})
-  }
+//     props.navigate('Search Page', { paramKey: username,})
+//   }
 
-  else{
-    if (email == '') {
-      alert ('Please enter Valid Email')
-      // alert for the email
-    }
+//   else{
+//     if (email == '') {
+//       alert ('Please enter Valid Email')
+//       // alert for the email
+//     }
 
-    else if (username == '') {
-      // alert for username
-      alert ('Please enter Valid Username')
-    }
+//     else if (username == '') {
+//       // alert for username
+//       alert ('Please enter Valid Username')
+//     }
 
-    else {
-      // alert for the password being empty
-      alert ('Please enter Valid Password')
-    }
-  }
+//     else {
+//       // alert for the password being empty
+//       alert ('Please enter Valid Password')
+//     }
+//   }
   
-}
+// }
+
 
 
 const Register = ({navigation}) => {
@@ -52,6 +58,40 @@ const Register = ({navigation}) => {
   const [pass1, setpass1] = useState('');
 
   const [pass2, setpass2] = useState('');
+
+  const [fetching, setFetching] = useState(false)
+  const [error, setError] = useState("")
+  const [isValid, setValid] = useState(true)
+
+
+  const __doSignUp = () => {
+    if (!email) {
+      setError("Email required *")
+      setValid(false)
+      return
+    } else if (!pass1 && pass1==pass2 && pass1.trim() && pass1.length > 6) {
+      setError("Weak password, minimum 5 chars")
+      setValid(false)
+      return
+    } else if (!__isValidEmail(email)) {
+      setError("Invalid Email")
+      setValid(false)
+      return
+    }
+  
+    __doCreateUser(email, pass1)
+  }
+  
+  const __doCreateUser = async (email, pass1) => {
+    try {
+      let response = await auth().createUserWithEmailAndPassword(email, pass1)
+      if (response) {
+        console.log(tag, "?", response)
+      }
+    } catch (e) {
+      console.error(e.message)
+    }
+  }
 
   return (
 
@@ -103,7 +143,7 @@ const Register = ({navigation}) => {
       <View>
 
         <TouchableOpacity 
-            onPress={ () => addItem(navigation, email, username, pass1)} 
+            onPress={ () => __doSignUp()} 
             style={styles.signUpBtn}>
             <Text style={styles.signIntext}>Sign Up</Text>
         </TouchableOpacity>
