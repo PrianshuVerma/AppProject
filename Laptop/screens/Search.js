@@ -10,15 +10,45 @@ import {dataArray} from './ComputerDataBase'
 
 function removeOtherBrands(Brand, data) {
 
+  if (Brand == 'any') {
+    return data;
+  }
+
   var temp = [];
 
-  var len = data.len;
+  var len = data.length;
 
-  
+  for (var i = 0; i < len; i ++){
 
+    if ((data[i].Brand) == Brand) {
+      temp.push(data[i]);
+    }
 
+  }
 
+  return temp;
 
+}
+
+function removeOtherRam(Ram, data) {
+
+  if (Ram == 'any') {
+    return data;
+  }
+
+  var temp = [];
+
+  var len = data.length;
+
+  for (var i = 0; i < len; i ++){
+
+    if ((data[i].Ram) == Ram) {
+      temp.push(data[i]);
+    }
+
+  }
+
+  return temp;
 
 }
 
@@ -35,11 +65,112 @@ const fetch_data = () => {
   }
 }
 
-const nav = (props, Brand) => {
+function removeOtherProcessor(Processor, data) {
+
+  if (Processor == 'any') {
+    return data;
+  }
+
+  var temp = [];
+
+  var len = data.length;
+
+  for (var i = 0; i < len; i ++){
+
+    if ((data[i].Processor) == Processor) {
+      temp.push(data[i]);
+    }
+
+  }
+
+  return temp;
+
+}
+
+function removeOtherHardrive(Hardrive, data) {
+
+  if (Hardrive == 'any') {
+    return data;
+  }
+
+  var temp = [];
+
+  var len = data.length;
+
+  for (var i = 0; i < len; i ++){
+
+    if ((data[i].Hardrive) == Hardrive) {
+      temp.push(data[i]);
+    }
+
+  }
+
+  return temp;
+
+}
+
+function removeOtherStorage(Storage, data) {
+
+  if (Storage == 'any') {
+    return data;
+  }
+
+  var temp = [];
+
+  var len = data.length;
+
+  for (var i = 0; i < len; i ++){
+
+    if ((data[i].Storage) == Storage) {
+      temp.push(data[i]);
+    }
+
+  }
+
+  return temp;
+
+}
+
+function removeOtherPrice(Price, data) {
+
+  if (Price == 'any') {
+    return data;
+  }
+
+  var temp = [];
+
+  var len = data.length;
+
+  for (var i = 0; i < len; i ++){
+
+    if ((data[i].Price) == Price) {
+      temp.push(data[i]);
+    }
+
+  }
+
+  return temp;
+
+}
+
+
+const nav = (props, Brand, Ram, Processor, Hardrive, Storage, Price) => {
 
   var final_arry = removeOtherBrands(Brand, dataArray);
 
-  fetch_data();
+  final_arry = removeOtherRam(Ram, final_arry);
+
+  final_arry = removeOtherProcessor(Processor, final_arry);
+
+  final_arry = removeOtherHardrive(Hardrive, final_arry);
+
+  final_arry = removeOtherStorage(Storage, final_arry);
+
+  final_arry = removeOtherPrice(Price, final_arry);
+
+  alert(JSON.stringify(final_arry));
+
+  //fetch_data();
 
 {/* } setTimeout(()=>{
     
@@ -239,7 +370,7 @@ const Search = ({route, navigation}) => {
         </View>
       <View>
         <TouchableOpacity 
-            onPress={() => nav(navigation, Brand)} 
+            onPress={() => nav(navigation, Brand, Ram, Processor, Hardrive, Storage, Price)} 
             style={styles.resultBtn}>
             <Text style={styles.resultText}>View Results</Text>
           </TouchableOpacity>
