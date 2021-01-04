@@ -264,7 +264,7 @@ const Search = ({route, navigation}) => {
       <DropDownPicker
         items={[
           {label: "Any",              value: "any"},
-          {label: 'Mac',              value: 'mac'},
+          {label: 'Apple',              value: 'apple'},
           {label: 'Windows',           value: 'window'},
           {label: "Hewlett-Packard",  value: "hp" },
           {label:"Asus",              value: "asus"},
@@ -336,7 +336,7 @@ const Search = ({route, navigation}) => {
           {label: "HDD",    value: "hdd"},
           {label: "SSD",    value: "ssd"},
         ]}
-        placeholder= {"Select Hardrive..."}
+        placeholder= {"Select Hard Drive..."}
         style= {{ backgroundColor: '#282828', borderColor: "#66FCF1", baseColor: "white"}}
         labelStyle= {{ fontSize: 17, textAlign: 'left', color: 'white'}}
         dropDownStyle= {{ backgroundColor: '#282828', borderColor: "#66FCF1",}}
